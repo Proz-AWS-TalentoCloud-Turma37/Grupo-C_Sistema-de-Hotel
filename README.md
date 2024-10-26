@@ -7,4 +7,8 @@
 > 
  [GitHub Pages](https://pages.github.com/)
  
- ![Descrição Imagem]((https://myoctocat.com/assets/images/base-octocat.svg))
+ ![Descrição Imagem](https://myoctocat.com/assets/images/base-octocat.svg).
+
+ <div align="center">
+    <img src="assets/tim.jpeg" width="300" height="200">
+<div>
