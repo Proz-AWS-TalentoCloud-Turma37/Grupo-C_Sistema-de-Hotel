@@ -8,6 +8,6 @@
 
 
 <div align="center">
-    <img src="[https://photos.app.goo.gl/5yYEfZzcWY5ov4Aj7](https://photos.app.goo.gl/Lrsm8TAyWW38sPeD9)" width="300" height="200">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/Xz7dBFY/Captura-de-tela-2024-10-30-190347.png" alt="Captura-de-tela-2024-10-30-190347" border="0"></a>
 <div>
 
