@@ -1,5 +1,6 @@
 # Sistema de Hotel
-## Sistema desenvolvido por:
+## Sistema desenvolvido por: Maycon Thiago, Núbia, Luiz Magno e Gabriella
+
 
 ### subtitulo
 
