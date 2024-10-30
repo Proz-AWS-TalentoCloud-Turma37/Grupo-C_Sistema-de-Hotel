@@ -15,7 +15,10 @@
 >
 
 ### Telas do sistema:
+Figma: https://www.figma.com/design/VsGuIt7BT4RmH7Pntqfkjg/Pousada-Talento-Cloud-e-Camping?node-id=0-1&node-type=canvas&t=I7eXfnFw1YUthbAo-0
+
 <div align="center">
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/Xz7dBFY/Captura-de-tela-2024-10-30-190347.png" alt="Captura-de-tela-2024-10-30-190347" border="0"></a>
 <div>
+
 
