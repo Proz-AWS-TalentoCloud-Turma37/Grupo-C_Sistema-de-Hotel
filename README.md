@@ -21,4 +21,19 @@ Figma: https://www.figma.com/design/VsGuIt7BT4RmH7Pntqfkjg/Pousada-Talento-Cloud
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/Xz7dBFY/Captura-de-tela-2024-10-30-190347.png" alt="Captura-de-tela-2024-10-30-190347" border="0"></a>
 <div>
 
+### Estrutura de Arquivos
 
+````plaintext
+hotel/
+├── public/
+│   ├── index.html           # Página inicial com descrição do hotel
+│   ├── login.html           # Login do sistema
+│   ├── criarConta.html        # Cadastro do hóspede
+│   ├── pagReserva.html        # Página da reserva
+|   ├── asset/
+|   ├──────── css/
+│   ├──────── style.css            # Estilos para a página
+|   ├──────── js/
+│   ├──────── script.js            # Estilos para a página
+|   └──────── img/
+````
