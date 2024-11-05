@@ -21,7 +21,7 @@ hotel/
 ├── public/
 │   ├── index.html           # Página inicial com descrição do hotel
 │   ├── login.html           # Login do sistema
-│   ├── criarConta.html        # Cadastro do hóspede
+│   ├── cadastro.html        # Cadastro do hóspede
 │   ├── pagReserva.html        # Página da reserva
 |   ├── asset/
 |   ├──────── css/
