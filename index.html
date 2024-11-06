@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Asset/Logo.hotel.bmp">
     <title>Pousada e Camping Talento Cloud</title>
+    <style>
+        .container {
+            display: flex;
+            background-color: #ffffff;
+        }
 
+        .coluna-texto {
+            text-align: justify;
+            flex: 1;
+            margin-left: 10%;
+            margin-right: 10%;
+            line-height: 1.6;
+        }
+
+        h2.pousada {
+            color: black;
+            font-size: 26px;
+        }
+
+        p.pousada {
+            color: black;
+            font-size: 14px;
+            padding-right: 40%;
+        }
+
+        .coluna-fotos {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-rows: auto auto; */
+            padding: 20px;
+            gap: 10px;
+            max-width: 300px;
+        }
+
+        .coluna-fotos img {
+            border-radius: 8px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
+
 <body style="font-family: Arial, sans-serif; color: #b1b1b1; margin: 0; padding: 0;">
 
     <!-- Cabeçalho -->
     <header style="background-color: #a27921; color: white; padding: 1em; text-align: center;">
         <h1 style="margin: 0;">Pousada Talento Cloud</h1>
-        <p style="margin: 0;"</p>
+        <p style="margin: 0;" </p>
     </header>
 
     <!-- Navegação -->
     <nav style="background-color: #333; padding: 0.5em; text-align: center;">
+        <a href="#pousada" style="color: white; margin: 0 1em; text-decoration: none;">SOBRE A POUSADA</a>
         <a href="#home" style="color: white; margin: 0 1em; text-decoration: none;">NOSSOS QUARTOS E SUÍTES</a>
         <a href="#lazer" style="color: white; margin: 0 1em; text-decoration: none;">LAZER</a>
         <a href="#servicos" style="color: white; margin: 0 1em; text-decoration: none;">SERVIÇOS</a>
@@ -28,19 +71,40 @@
     <!-- Seção principal -->
     <main style="padding: 2em;">
 
+        <!-- Seção SOBRE A POUSADA -->
+        <section id="pousada">
+            <div class="container">
+                <div class="coluna-texto">
+                    <h2 class="pousada">Pousada e Camping Talento Cloud</h2>
+                    <p class="pousada">Sejam bem vindos ao nosso recanto de paz em meio à natureza!<br>
+                        Com mais de 25 anos de história, amizades, famílias, muito amor e cuidado aos nossos
+                        queridos hóspedes, te convidamos a fazer parte também desta família.<br>
+                        O ambiente se mescla aos nossos espaços, tornando aqui o lugar ideal para uma boa meditação
+                        ou diversão com as pessoas amadas. <br>O difícil é não se apaixonar...
+                    </p>
+                </div>
+                <div class="coluna-fotos">
+                    <img src="Asset\pousadaTalento.01.png" alt="Foto de quarto" class="fotoquarto">
+                    <img src="Asset/pousadaTalento.02.png" alt="Foto de cachoeira" class="fotocachoeira">
+                    <img src="Asset/pousadaTalento.03.png" alt="Foto do hotel" class="fotohotel">
+                    <img src="Asset/pousadaTalento.04.png" alt="Foto de café da manhã" class="fotocafe">
+                </div>
+            </div>
+        </section>
+
         <!-- Seção de NOSSOS QUARTOS E SUÍTES -->
         <section id="home" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
-           <h2>NOSSOS QUARTOS E SUÍTES</h2>
+            <h2>NOSSOS QUARTOS E SUÍTES</h2>
         </section>
 
         <!-- Seção LAZER -->
         <section id="lazer" style="padding: 1em; margin-bottom: 1em; ">
-           <h2>LAZER</h2>
+            <h2>LAZER</h2>
         </section>
 
         <!-- Seção de SERVIÇOS -->
         <section id="servicos" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
-            <h2>SERVIÇOS</h2>    
+            <h2>SERVIÇOS</h2>
         </section>
 
         <!-- Seção de CONHEÇA NOSSO HOTEL -->
@@ -52,7 +116,7 @@
         <section id="avaliacoes" style="padding: 1em;">
             <h2>DEPOIMENTOS</h2>
         </section>
-         <!-- Seção de CONTATOS-->
+        <!-- Seção de CONTATOS-->
         <section id="contato" style="padding: 1em;">
             <h2>CONTATO</h2>
         </section>
@@ -64,4 +128,5 @@
     </footer>
 
 </body>
+
 </html>
