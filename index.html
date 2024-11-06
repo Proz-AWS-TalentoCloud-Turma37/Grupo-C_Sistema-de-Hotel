@@ -1,96 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Assets/Logo.hotel.bmp">
     <title>Pousada e Camping Talento Cloud</title>
-    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            background-color: #ffffff;
+        }
 
+        .coluna-texto {
+            text-align: justify;
+            flex: 1;
+            margin-left: 10%;
+            margin-right: 10%;
+            line-height: 1.6;
+        }
+
+        h2.pousada {
+            color: black;
+            font-size: 26px;
+        }
+
+        p.pousada {
+            color: black;
+            font-size: 14px;
+            padding-right: 40%;
+        }
+
+        .coluna-fotos {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-rows: auto auto; */
+            padding: 20px;
+            gap: 10px;
+            max-width: 300px;
+        }
+
+        .coluna-fotos img {
+            border-radius: 8px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
-<body>
-    
-    <nav id="navbar">
-        <div id="navbar-container">
-            <a id="navbar-brand" href="#">
-                <img src="Assets/logo.jpeg" alt="Logo">
-            </a>
-            <div id="navbarNav">
-                <ul id="navbar-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reservar</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<body style="font-family: Arial, sans-serif; color: #b1b1b1; margin: 0; padding: 0;">
+
+    <!-- Cabeçalho -->
+    <header style="background-color: #a27921; color: white; padding: 1em; text-align: center;">
+        <h1 style="margin: 0;">Pousada Talento Cloud</h1>
+        <p style="margin: 0;" </p>
+    </header>
+
+    <!-- Navegação -->
+    <nav style="background-color: #333; padding: 0.5em; text-align: center;">
+        <a href="#pousada" style="color: white; margin: 0 1em; text-decoration: none;">SOBRE A POUSADA</a>
+        <a href="#home" style="color: white; margin: 0 1em; text-decoration: none;">NOSSOS QUARTOS E SUÍTES</a>
+        <a href="#lazer" style="color: white; margin: 0 1em; text-decoration: none;">LAZER</a>
+        <a href="#servicos" style="color: white; margin: 0 1em; text-decoration: none;">SERVIÇOS</a>
+        <a href="#sobre" style="color: white; margin: 0 1em; text-decoration: none;">CONHEÇA NOSSO HOTEL</a>
+        <a href="#avaliacoes" style="color: white; margin: 0 1em; text-decoration: none;">AVALIAÇÕES</a>
+        <a href="#contato" style="color: white; margin: 0 1em; text-decoration: none;">CONTATO</a>
     </nav>
-    <section id="hero-section">
-        <div id="hero-container">
-            <div id="search-box">
-                <form>
-                    <div class="form-row">
-                        <div class="form-column">
-                            <input type="date" class="form-input" placeholder="Check-in">
-                        </div>
-                        <div class="form-column">
-                            <input type="date" class="form-input" placeholder="Check-out">
-                        </div>
-                        <div class="form-column">
-                            <select class="form-select">
-                                <option selected>Hóspedes</option>
-                                <option value="1">1 Hóspede</option>
-                                <option value="2">2 Hóspedes</option>
-                                <option value="3">3 Hóspedes</option>
-                                <option value="4">4 Hóspedes</option>
-                            </select>
-                        </div>
-                        <div class="form-column">
-                            <input type="text" class="form-input" placeholder="Cupom">
-                        </div>
-                        <div class="form-column btn-alinhar">
-                            <button type="submit" id="btn-pesquisar">Pesquisar</button>
-                        </div>
-                    </div>
-                </form>
+
+    <!-- Seção principal -->
+    <main style="padding: 2em;">
+
+    <!-- Seção SOBRE A POUSADA -->
+    <section id="pousada">
+         <div class="container">
+             <div class="coluna-texto">
+                 <h2 class="pousada">Pousada e Camping Talento Cloud</h2>
+                 <p class="pousada">Sejam bem vindos ao nosso recanto de paz em meio à natureza!<br>
+                     Com mais de 25 anos de história, amizades, famílias, muito amor e cuidado aos nossos
+                     queridos hóspedes, te convidamos a fazer parte também desta família.<br>
+                     O ambiente se mescla aos nossos espaços, tornando aqui o lugar ideal para uma boa meditação
+                     ou diversão com as pessoas amadas. <br>O difícil é não se apaixonar...
+                 </p>
             </div>
-        </div>
-    </section>
-    <section class="servicos-section background-section">
-        <h2>Serviços</h2>
-        <div class="servicos-container">
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.01.bmp" alt="Sala de TV">
-                <p>Sala de TV</p>
+            <div class="coluna-fotos">
+                <img src="Asset\pousadaTalento.01.png" alt="Foto de quarto" class="fotoquarto">
+                <img src="Asset/pousadaTalento.02.png" alt="Foto de cachoeira" class="fotocachoeira">
+                <img src="Asset/pousadaTalento.03.png" alt="Foto do hotel" class="fotohotel">
+                <img src="Asset/pousadaTalento.04.png" alt="Foto de café da manhã" class="fotocafe">
             </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.02.bmp" alt="Recepção 24h">
-                <p>Recepção 24h</p>
-            </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.03.bmp" alt="Ar Condicionado">
-                <p>Ar Condicionado</p>
-            </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.04.bmp" alt="Rede Wi-fi">
-                <p>Rede Wi-fi</p>
-            </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.05.bmp" alt="Frigobar">
-                <p>Frigobar</p>
-            </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.06.bmp" alt="Varanda">
-                <p>Varanda</p>
-            </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.07.bmp" alt="Ferro de Passar">
-                <p>Ferro de Passar</p>
-            </div>
-            <div class="servico-item">
-                <img src="Assets/servico/servico.ico.08.bmp" alt="Estacionamento Gratuito">
-                <p>Estacionamento Gratuito</p>
-            </div>
-        </div>
-    </section>
-</body>
+		</div>
+        </section>
+
+        <!-- Seção de NOSSOS QUARTOS E SUÍTES -->
+        <section id="home" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+            <h2>NOSSOS QUARTOS E SUÍTES</h2>
+        </section>
+
+        <!-- Seção LAZER -->
+        <section id="lazer" style="padding: 1em; margin-bottom: 1em; ">
+            <h2>LAZER</h2>
+        </section>
+
+        <!-- Seção de SERVIÇOS -->
+        <section id="servicos" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+            <h2>SERVIÇOS</h2>
+        </section>
+
+        <!-- Seção de CONHEÇA NOSSO HOTEL -->
+        <section id="sobre" style="padding: 1em; margin-bottom: 1em;">
+            <h2>CONHEÇA NOSSO HOTEL</h2>
+        </section>
+
+        <!-- Seção de DEPOIMENTOS-->
+        <section id="avaliacoes" style="padding: 1em;">
+            <h2>DEPOIMENTOS</h2>
+        </section>
+        <!-- Seção de CONTATOS-->
+        <section id="contato" style="padding: 1em;">
+            <h2>CONTATO</h2>
+        </section>
+		<!-- Seção de Cadastro-->
+		<section>
+		<nav id="navbar">
+			<div id="navbar-container">
+				<a id="navbar-brand" href="#">
+					<img src="Assets/logo.jpeg" alt="Logo">
+				</a>
+				<div id="navbarNav">
+					<ul id="navbar-items">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Reservar</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<section id="hero-section">
+			<div id="hero-container">
+				<div id="search-box">
+					<form>
+						<div class="form-row">
+							<div class="form-column">
+								<input type="date" class="form-input" placeholder="Check-in">
+							</div>
+							<div class="form-column">
+								<input type="date" class="form-input" placeholder="Check-out">
+							</div>
+							<div class="form-column">
+								<select class="form-select">
+									<option selected>Hóspedes</option>
+									<option value="1">1 Hóspede</option>
+									<option value="2">2 Hóspedes</option>
+									<option value="3">3 Hóspedes</option>
+									<option value="4">4 Hóspedes</option>
+								</select>
+							</div>
+							<div class="form-column">
+								<input type="text" class="form-input" placeholder="Cupom">
+							</div>
+							<div class="form-column btn-alinhar">
+								<button type="submit" id="btn-pesquisar">Pesquisar</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="servicos-section background-section">
+			<h2>Serviços</h2>
+			<div class="servicos-container">
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.01.bmp" alt="Sala de TV">
+					<p>Sala de TV</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.02.bmp" alt="Recepção 24h">
+					<p>Recepção 24h</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.03.bmp" alt="Ar Condicionado">
+					<p>Ar Condicionado</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.04.bmp" alt="Rede Wi-fi">
+					<p>Rede Wi-fi</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.05.bmp" alt="Frigobar">
+					<p>Frigobar</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.06.bmp" alt="Varanda">
+					<p>Varanda</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.07.bmp" alt="Ferro de Passar">
+					<p>Ferro de Passar</p>
+				</div>
+				<div class="servico-item">
+					<img src="Assets/servico/servico.ico.08.bmp" alt="Estacionamento Gratuito">
+					<p>Estacionamento Gratuito</p>
+				</div>
+			</div>
+		  </section>
+    </main>  
+    <!-- Rodapé -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 1em;">
+        <p>&copy; 2024 Meu Site - Todos os direitos reservados.</p>
+    </footer>
 </html>
