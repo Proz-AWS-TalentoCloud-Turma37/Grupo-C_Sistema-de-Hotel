@@ -1,156 +1,116 @@
-#hero-section {
-    background-image: url('overlook.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-}
-
-#search-box {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 50px;
-}
-
-.form-input, .form-select {
-    margin: 5px 0;
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.form-row {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.form-column {
-    flex: 1;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#btn-pesquisar {
-    background-color: #007bff;
-    color: #fff;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-#btn-pesquisar:hover {
-    background-color: #0056b3;
-}
-
-#navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: #f8f9fa;
-}
-
-#navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-#navbar-brand img {
-    height: 40px;
-    margin-right: 10px;
-}
-
-#navbar-toggler {
-    padding: 0.25rem 0.75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.25rem;
-    cursor: pointer;
-}
-
-#navbarNav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-#navbar-items {
-    display: flex;
-    list-style: none;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.nav-link {
-    background-color: #007bff;
-    color: #fff;
+header {
+    background-color: #A0692F;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+footer {
+    background-color: #A0692F;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.form-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
     width: 100%;
     padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
     border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
 }
 
-#nav-link:hover {
-    background-color: #0056b3;
-}
-
-.nav-link:hover {
-    color: rgba(0, 0, 0, 0.7);
+button:hover {
+    background-color: #45a049;
 }
 
 @media (max-width: 768px) {
-    #navbar-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0;
-        margin: 0;
+    .form-box {
+        padding: 20px;
     }
 
-    #navbarNav {
-        display: block;
-        margin-top: 10px;
+    button {
+        font-size: 16px;
     }
 
-    .form-row {
-        flex-direction: column;
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-box {
+        padding: 15px;
     }
 
-    .form-column {
-        margin: 5px 0;
+    h2 {
+        font-size: 24px;
     }
 
-    #search-box {
-        width: 90%;
+    button {
+        font-size: 14px;
     }
 
-    #navbar-brand img {
-        visibility: hidden;
+    header h1 {
+        font-size: 18px;
     }
 }

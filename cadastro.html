@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Reservas</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro</title>
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <nav id="navbar">
-        <div id="navbar-container">
-            <a id="navbar-brand" href="#">
-                <img src="logo.jpeg" alt="Logo">
-            </a>
-            <div id="navbarNav">
-                <ul id="navbar-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Reservar</a>
-                    </li>
-                </ul>
-            </div>
+    <header>
+        <h1>Pousada Talento Cloud</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-box">
+            <h2>Cadastro</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirma_senha">Confirmar Senha</label>
+                    <input type="password" id="confirma_senha" name="confirma_senha" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
         </div>
-    </nav>
-    <section id="hero-section">
-        <div id="hero-container">
-            <div id="search-box">
-                <form>
-                    <div class="form-row">
-                        <div class="form-column">
-                            <input type="date" class="form-input" placeholder="Check-in">
-                        </div>
-                        <div class="form-column">
-                            <input type="date" class="form-input" placeholder="Check-out">
-                        </div>
-                        <div class="form-column">
-                            <select class="form-select">
-                                <option selected>Hóspedes</option>
-                                <option value="1">1 Hóspede</option>
-                                <option value="2">2 Hóspedes</option>
-                                <option value="3">3 Hóspedes</option>
-                                <option value="4">4 Hóspedes</option>
-                            </select>
-                        </div>
-                        <div class="form-column">
-                            <input type="text" class="form-input" placeholder="Cupom">
-                        </div>
-                        <div class="form-column btn-alinhar">
-                            <button type="submit" id="btn-pesquisar">Pesquisar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+    </div>
+
+    <footer>
+        <p> 2024 Pousada Talento Cloud.</p>
+    </footer>
 </body>
 </html>
