@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça Nosso Hotel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d88d43;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #fcf8f5;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #fcf8f5;
+            margin-bottom: 2em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .grid img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CONHEÇA NOSSO HOTEL</h1>
+        <p>25 anos de tradição<br>O lugar onde todos os detalhes criam um clima intimista, calmo e perfeito!</p>
+        
+        <div class="grid">
+            <img src="https://drive.google.com/thumbnail?id=17bBV_jKamyC7_ZXcdaAOQmHY4jl7nZJw"> 
+            <img src="https://drive.google.com/thumbnail?id=1Q_6yy-OocP-OZ8-BU2qsQj1Eme_GXHZh"> 
+            <img src="https://drive.google.com/thumbnail?id=18L1x8w0dbrNCJx6Gb3I4Pk8y4oC4g8gD"> 
+            <img src="https://drive.google.com/thumbnail?id=1RhStubiUH1yBYvyjjUF1t6zxFkEqGuJX"> 
+            <img src="https://drive.google.com/thumbnail?id=17xV-1dVzMEaAtoAtLc1rxjKF6TF-5Vqz"> 
+            <img src="https://drive.google.com/thumbnail?id=1C4edQpU36U0zVbFlxvQArBu5jm6G0_KM"> 
+            <img src="https://drive.google.com/thumbnail?id=1KVB_tiASKWhzWNWKCqp4wAghMg9gvn0I"> 
+            <img src="https://drive.google.com/thumbnail?id=1LQAxtYGxWK8B6N5s15wjVmfd2XsbGEmy"> 
+            <img src="https://drive.google.com/thumbnail?id=1VMkYUcYmptWT-ChWWrKoTPYzYp0OgvF7"> 
+            <img src="https://drive.google.com/thumbnail?id=138na-CFnXpKiSlNx7iV1RWtMpghyA0hq">
+            <img src="https://drive.google.com/thumbnail?id=18hyn30vd79lNxNJC4JKT0fkKqSuWGCHP">
+            <img src="https://drive.google.com/thumbnail?id=1s7woiszrcRgrk4DgZbKT7FE7HhXXrPWU">
+            <img src="https://drive.google.com/thumbnail?id=1Vlz1glzy55ntO0654_8stzL8wVwRzUD7">
+            <img src="https://drive.google.com/thumbnail?id=1WCNEW_jEoUZ5Aiym5IovJtuIVjRpHrfZ">
+            <img src="https://drive.google.com/thumbnail?id=1a4beB-QGJSo7RQ4U747rszdbcxJ7YwDs">
+        </div>
+    </div>
+
+</body>
+</html>
