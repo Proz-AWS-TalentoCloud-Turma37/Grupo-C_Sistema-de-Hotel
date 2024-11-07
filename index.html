@@ -12,13 +12,26 @@
 <body style="font-family: Arial, sans-serif; color: #b1b1b1; margin: 0; padding: 0;">
 
     <!-- Cabeçalho -->
-    <header style="background-color: #a27921; color: white; padding: 1em; text-align: center;">
-        <h1 style="margin: 0;">Pousada Talento Cloud</h1>
-        <p style="margin: 0;"></p>
+    <header style="text-align: center;">
+        <nav id="navbar">
+            <div id="navbar-container">
+                <a id="navbar-brand" href="#">
+                    <img src="Assets/logo.jpeg" alt="Logo">
+                </a>
+                <h3>POUSADA TALENTO CLOUD</h3>
+                <div id="navbarNav">
+                    <ul id="navbar-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reservar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Navegação -->
-    <nav style="background-color: #333; padding: 0.5em; text-align: center;">
+    <nav style="background-color: #a27921; padding: 0.5em; text-align: center;">
         <a href="#pousada" style="color: white; margin: 0 1em; text-decoration: none;">SOBRE A POUSADA</a>
         <a href="#home" style="color: white; margin: 0 1em; text-decoration: none;">NOSSOS QUARTOS E SUÍTES</a>
         <a href="#lazer" style="color: white; margin: 0 1em; text-decoration: none;">LAZER</a>
@@ -30,6 +43,37 @@
 
     <!-- Seção principal -->
     <main style="padding: 2em;">
+        <section id="hero-section">
+            <div id="hero-container">
+                <div id="search-box">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-column">
+                                <input type="date" class="form-input" placeholder="Check-in">
+                            </div>
+                            <div class="form-column">
+                                <input type="date" class="form-input" placeholder="Check-out">
+                            </div>
+                            <div class="form-column">
+                                <select class="form-select">
+                                    <option selected>Hóspedes</option>
+                                    <option value="1">1 Hóspede</option>
+                                    <option value="2">2 Hóspedes</option>
+                                    <option value="3">3 Hóspedes</option>
+                                    <option value="4">4 Hóspedes</option>
+                                </select>
+                            </div>
+                            <div class="form-column">
+                                <input type="text" class="form-input" placeholder="Cupom">
+                            </div>
+                            <div class="form-column btn-alinhar">
+                                <button type="submit" id="btn-pesquisar">Pesquisar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
 
         <!-- Seção SOBRE A POUSADA -->
         <section id="pousada">
@@ -44,17 +88,50 @@
                     </p>
                 </div>
                 <div class="coluna-fotos">
-                    <img src="Asset\pousadaTalento.01.png" alt="Foto de quarto" class="fotoquarto">
-                    <img src="Asset/pousadaTalento.02.png" alt="Foto de cachoeira" class="fotocachoeira">
-                    <img src="Asset/pousadaTalento.03.png" alt="Foto do hotel" class="fotohotel">
-                    <img src="Asset/pousadaTalento.04.png" alt="Foto de café da manhã" class="fotocafe">
+                    <img src="Assets/pousada/pousadaTalento.01.png" alt="Foto de quarto" class="fotoquarto">
+                    <img src="Assets/pousada/pousadaTalento.02.png" alt="Foto de cachoeira" class="fotocachoeira">
+                    <img src="Assets/pousada/pousadaTalento.03.png" alt="Foto do hotel" class="fotohotel">
+                    <img src="Assets/pousada/pousadaTalento.04.png" alt="Foto de café da manhã" class="fotocafe">
                 </div>
             </div>
         </section>
 
         <!-- Seção de NOSSOS QUARTOS E SUÍTES -->
         <section id="home" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
-            <h2>NOSSOS QUARTOS E SUÍTES</h2>
+            <div class="containerquartos">
+                <h2>NOSSOS QUARTOS E SUÍTES</h2>
+                <div class="arrows">
+                    <span>&#9664;</span>
+                    <div class="rooms">
+                        <!-- Suite Standard -->
+                        <div class="card">
+                            <img src="https://drive.google.com/thumbnail?id=1xIVEsRW9sDgzgMntXBhNuM50PqGZA4cD"
+                                alt="Suite Standard">
+                            <div class="card-content">
+                                <div class="card-title">Suite Standard</div>
+                                <div class="card-description">A suite standard encontra-se em frente ao belo jardim, um
+                                    verdadeiro convite ao paraíso</div>
+                                <div class="card-price">A partir de: R$ 250/Noite</div>
+                                <a href="#" class="reserve-button">Reservar</a>
+                            </div>
+                        </div>
+
+                        <!-- Suite Master -->
+                        <div class="card">
+                            <img src="https://drive.google.com/thumbnail?id=1wvTuY4R9jaD09VkB-hh8PLB3DzWp1Nzb"
+                                alt="Suite Master">
+                            <div class="card-content">
+                                <div class="card-title">Suite Master</div>
+                                <div class="card-description">A suite master possui vista à nossa piscina e área verde,
+                                    um deslumbre aos olhos</div>
+                                <div class="card-price">A partir de: R$ 400/Noite</div>
+                                <a href="#" class="reserve-button">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <span>&#9654;</span>
+                </div>
+            </div>
         </section>
 
         <!-- Seção LAZER -->
@@ -63,13 +140,69 @@
         </section>
 
         <!-- Seção de SERVIÇOS -->
-        <section id="servicos" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
+        <section id="servicos" class="servicos-section background-section"
+            style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
             <h2>SERVIÇOS</h2>
+            <div class="servicos-container">
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.01.bmp" alt="Sala de TV">
+                    <p>Sala de TV</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.02.bmp" alt="Recepção 24h">
+                    <p>Recepção 24h</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.03.bmp" alt="Ar Condicionado">
+                    <p>Ar Condicionado</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.04.bmp" alt="Rede Wi-fi">
+                    <p>Rede Wi-fi</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.05.bmp" alt="Frigobar">
+                    <p>Frigobar</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.06.bmp" alt="Varanda">
+                    <p>Varanda</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.07.bmp" alt="Ferro de Passar">
+                    <p>Ferro de Passar</p>
+                </div>
+                <div class="servico-item">
+                    <img src="Assets/servico/servico.ico.08.bmp" alt="Estacionamento Gratuito">
+                    <p>Estacionamento Gratuito</p>
+                </div>
+            </div>
         </section>
 
         <!-- Seção de CONHEÇA NOSSO HOTEL -->
         <section id="sobre" style="padding: 1em; margin-bottom: 1em;">
-            <h2>CONHEÇA NOSSO HOTEL</h2>
+            <div class="containerconheca">
+                <h2>CONHEÇA NOSSO HOTEL</h2>
+                <p>25 anos de tradição<br>O lugar onde todos os detalhes criam um clima intimista, calmo e perfeito!</p>
+
+                <div class="gridconheca">
+                    <img src="https://drive.google.com/thumbnail?id=17bBV_jKamyC7_ZXcdaAOQmHY4jl7nZJw">
+                    <img src="https://drive.google.com/thumbnail?id=1Q_6yy-OocP-OZ8-BU2qsQj1Eme_GXHZh">
+                    <img src="https://drive.google.com/thumbnail?id=18L1x8w0dbrNCJx6Gb3I4Pk8y4oC4g8gD">
+                    <img src="https://drive.google.com/thumbnail?id=1RhStubiUH1yBYvyjjUF1t6zxFkEqGuJX">
+                    <img src="https://drive.google.com/thumbnail?id=17xV-1dVzMEaAtoAtLc1rxjKF6TF-5Vqz">
+                    <img src="https://drive.google.com/thumbnail?id=1C4edQpU36U0zVbFlxvQArBu5jm6G0_KM">
+                    <img src="https://drive.google.com/thumbnail?id=1KVB_tiASKWhzWNWKCqp4wAghMg9gvn0I">
+                    <img src="https://drive.google.com/thumbnail?id=1LQAxtYGxWK8B6N5s15wjVmfd2XsbGEmy">
+                    <img src="https://drive.google.com/thumbnail?id=1VMkYUcYmptWT-ChWWrKoTPYzYp0OgvF7">
+                    <img src="https://drive.google.com/thumbnail?id=138na-CFnXpKiSlNx7iV1RWtMpghyA0hq">
+                    <img src="https://drive.google.com/thumbnail?id=18hyn30vd79lNxNJC4JKT0fkKqSuWGCHP">
+                    <img src="https://drive.google.com/thumbnail?id=1s7woiszrcRgrk4DgZbKT7FE7HhXXrPWU">
+                    <img src="https://drive.google.com/thumbnail?id=1Vlz1glzy55ntO0654_8stzL8wVwRzUD7">
+                    <img src="https://drive.google.com/thumbnail?id=1WCNEW_jEoUZ5Aiym5IovJtuIVjRpHrfZ">
+                    <img src="https://drive.google.com/thumbnail?id=1a4beB-QGJSo7RQ4U747rszdbcxJ7YwDs">
+                </div>
+            </div>
         </section>
 
         <!-- Seção de DEPOIMENTOS-->
@@ -81,95 +214,32 @@
         <section id="contato" style="padding: 1em;">
             <h2>CONTATO</h2>
         </section>
-        
+
         <!-- Seção de Cadastro-->
-        <section>
-            <nav id="navbar">
-                <div id="navbar-container">
-                    <a id="navbar-brand" href="#">
-                        <img src="Assets/logo.jpeg" alt="Logo">
-                    </a>
-                    <div id="navbarNav">
-                        <ul id="navbar-items">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Reservar</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <section id="hero-section">
-                <div id="hero-container">
-                    <div id="search-box">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-column">
-                                    <input type="date" class="form-input" placeholder="Check-in">
-                                </div>
-                                <div class="form-column">
-                                    <input type="date" class="form-input" placeholder="Check-out">
-                                </div>
-                                <div class="form-column">
-                                    <select class="form-select">
-                                        <option selected>Hóspedes</option>
-                                        <option value="1">1 Hóspede</option>
-                                        <option value="2">2 Hóspedes</option>
-                                        <option value="3">3 Hóspedes</option>
-                                        <option value="4">4 Hóspedes</option>
-                                    </select>
-                                </div>
-                                <div class="form-column">
-                                    <input type="text" class="form-input" placeholder="Cupom">
-                                </div>
-                                <div class="form-column btn-alinhar">
-                                    <button type="submit" id="btn-pesquisar">Pesquisar</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            <section class="servicos-section background-section">
-                <h2>Serviços</h2>
-                <div class="servicos-container">
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.01.bmp" alt="Sala de TV">
-                        <p>Sala de TV</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.02.bmp" alt="Recepção 24h">
-                        <p>Recepção 24h</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.03.bmp" alt="Ar Condicionado">
-                        <p>Ar Condicionado</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.04.bmp" alt="Rede Wi-fi">
-                        <p>Rede Wi-fi</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.05.bmp" alt="Frigobar">
-                        <p>Frigobar</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.06.bmp" alt="Varanda">
-                        <p>Varanda</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.07.bmp" alt="Ferro de Passar">
-                        <p>Ferro de Passar</p>
-                    </div>
-                    <div class="servico-item">
-                        <img src="Assets/servico/servico.ico.08.bmp" alt="Estacionamento Gratuito">
-                        <p>Estacionamento Gratuito</p>
-                    </div>
-                </div>
-            </section>
+
     </main>
     <!-- Rodapé -->
-    <footer style="background-color: #333; color: white; text-align: center; padding: 1em;">
-        <p>&copy; 2024 Meu Site - Todos os direitos reservados.</p>
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="https://drive.google.com/thumbnail?id=19UfrThkxbL6NmHpGWKjqZP4aa1q0MIC6">
+            <h2>Pousada Talento Cloud</h2>
+        </div>
+        <div class="footer-links">
+            <p>A POUSADA</p>
+            <p>ACOMODAÇÕES</p>
+            <p>LAZER</p>
+            <p>SERVIÇOS</p>
+            <p>GALERIA</p>
+            <p>AVALIAÇÕES</p>
+            <p>FALE CONOSCO</p>
+        </div>
+        <div class="footer-contact">
+            <p>Contato:<br>
+                (00) 0000-0000<br>
+                pousadatalentocloud@gmail.com</p>
+            <p>Rua Prof. Tecnologia, 37 - Recife<br>
+                Pernambuco</p>
+        </div>
     </footer>
 
 </html>
