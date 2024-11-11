@@ -444,3 +444,58 @@ p.pousada {
         grid-template-columns: 1fr;
     }
 }
+#contato {
+    background-image: url(Assets/faleConosco.01.png);
+    background-size: cover;
+}
+.contact-section {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+
+.contact-form {
+    background-color: #d6d5d5;
+    padding: 2em;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    justify-items: center;
+}
+
+/* Estilo para os campos do formulário */
+.form-group {
+    margin-bottom: 1em;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #d4a45f;
+    color: #fff;
+    border:#000000;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    justify-content: center;
+}
+
+.contact-form button:hover {
+    background-color: #c28b4b;
+}
