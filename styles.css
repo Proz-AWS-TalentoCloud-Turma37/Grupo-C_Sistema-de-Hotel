@@ -9,7 +9,7 @@
     background-image: url('Assets/cabecalho/cabeçalho.cachoeira.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: end;
@@ -215,4 +215,288 @@ h2 {
     .servico-item p {
         font-size: 16px;
     }
+}
+
+/* Seção de Sobre a Pousada */
+
+.container {
+    display: flex;
+    background-color: #ffffff;
+}
+
+.coluna-texto {
+    flex: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 1.6;
+}
+
+h2.pousada {
+    color: black;
+    font-size: 30px;
+    text-align: left;
+    margin-top: 10%;
+    margin-right: 40%;
+}
+
+p.pousada {
+    color: black;
+    font-size: 14px;
+    text-align: justify;
+    padding-right: 40%;
+    margin-bottom: 10%;
+}
+
+.coluna-fotos {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: auto auto; */
+    margin-top: 5%;
+    padding: 20px;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.coluna-fotos img {
+    border-radius: 8px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Seção de Rodapé */
+
+.footer {
+    background-color: #a66a3f; 
+    color: #ffffff;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 120px; 
+}
+
+.footer-logo h2 {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-links,
+.footer-contact {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+/* Seção de Quartos */
+
+.containerquartos {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.rooms {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.reserve-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3cb3a6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.reserve-button:hover {
+    background-color: #2a8d7e;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    color: #3cb3a6;
+    cursor: pointer;
+}
+
+.arrows span {
+    user-select: none;
+}
+
+/* Seção de Conheça Nosso Hotel */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.containerconheca {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #d88d43;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pconheca {
+    font-size: 1.1em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.gridconheca {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gridconheca img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gridconheca img:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .gridconheca {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gridconheca {
+        grid-template-columns: 1fr;
+    }
+}
+#contato {
+    background-image: url(Assets/faleConosco.01.png);
+    background-size: cover;
+}
+.contact-section {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+
+.contact-form {
+    background-color: #d6d5d5;
+    padding: 2em;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    justify-items: center;
+}
+
+/* Estilo para os campos do formulário */
+.form-group {
+    margin-bottom: 1em;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #d4a45f;
+    color: #fff;
+    border:#000000;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    justify-content: center;
+}
+
+.contact-form button:hover {
+    background-color: #c28b4b;
 }
