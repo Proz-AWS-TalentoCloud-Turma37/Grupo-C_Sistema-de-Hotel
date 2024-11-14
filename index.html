@@ -11,50 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-  	<link rel="stylesheet" href="styles.css">
-    <style>
-        .container {
-            display: flex;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .coluna-texto {
-            text-align: justify;
-            flex: 1.4;
-            margin-left: 10%;
-            margin-right: 10%;
-            line-height: 1.6;
-        }
-
-        h2.pousada {
-            color: black;
-            font-size: 26px;
-        }
-
-        p.pousada {
-            color: black;
-            font-size: 14px;
-            padding-right: 40%;
-        }
-
-        .coluna-fotos {
-            flex: 0.6;
-        }
-
-        img {
-            max-width: auto;
-            height: 10%;
-            margin-bottom: 10px;
-            border-radius: 10px;
-        }
-
-        .container .row {
-            gap: 0 !important;
-        }
-    </style>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body style="font-family: Arial, sans-serif; color: #b1b1b1; margin: 0; padding: 0;">
@@ -91,7 +48,6 @@
 
     <!-- Seção principal -->
     <main style="padding: 2em;">
-      
         <section id="hero-section">
             <div id="hero-container">
                 <div id="search-box">
@@ -120,12 +76,13 @@
                             </div>
                         </div>
                     </form>
+                </div>
             </div>
         </section>
 
-      <!-- Seção SOBRE A POUSADA -->
+        <!-- Seção SOBRE A POUSADA -->
         <section id="pousada">
-            <div class="container">
+            <div class="containersobre">
                 <div class="coluna-texto">
                     <h2 class="pousada">Pousada e Camping Talento Cloud</h2>
                     <p class="pousada">Sejam bem vindos ao nosso recanto de paz em meio à natureza!<br>
@@ -139,22 +96,24 @@
                     <div class="row g-2">
                         <div class="col-12 col-md-6">
                             <div class="row">
-                                <img src="Asset/pousadaTalento.01.png" alt="Imagem do quarto do hotel">
+                                <img src="Assets/pousada/pousadaTalento.01.png" alt="Imagem do quarto do hotel">
                             </div>
                             <div class="row">
-                                <img src="Asset/pousadaTalento.02.png" alt="Imagem da cachoeira do hotel">
+                                <img src="Assets/pousada/pousadaTalento.02.png" alt="Imagem da cachoeira do hotel">
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
                             <div class="row">
-                                <img src="Asset/pousadaTalento.03.png" alt="Imagem do hotel">
+                                <img src="Assets/pousada/pousadaTalento.03.png" alt="Imagem do hotel">
                             </div>
                             <div class="row">
-                                <img src="Asset/pousadaTalento.04.png" alt="Imagem do café da manhã do hotel">
+                                <img src="Assets/pousada/pousadaTalento.04.png" alt="Imagem do café da manhã do hotel">
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
+            </div>
+        </section>
 
         <!-- Seção de NOSSOS QUARTOS E SUÍTES -->
         <section id="home" style="padding: 1em; background-color: #f4f4f4; margin-bottom: 1em;">
@@ -291,9 +250,9 @@
         </section>
     </main>
 
-        <!-- Seção de Cadastro-->
+    <!-- Seção de Cadastro-->
 
-    
+
     <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-logo">
@@ -317,6 +276,6 @@
                 Pernambuco</p>
         </div>
     </footer>
-    
+
 
 </html>
