@@ -257,6 +257,14 @@ img {
     margin-bottom: 10px;
     border-radius: 10px;
 }
+.d-flex.flex-column.align-items-center {
+    height: 100%;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
 
 .container .row {
     gap: 0 !important;
