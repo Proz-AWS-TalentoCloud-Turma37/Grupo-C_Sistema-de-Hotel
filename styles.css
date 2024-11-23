@@ -406,13 +406,18 @@ img {
     padding: 0;
 }
 
+#sobre{
+    background-color: #d88d43;
+    justify-items: center;
+}
+
 .containerconheca {
-    max-width: 1200px;
+    max-width: 800px;
     padding: 20px;
+    margin-inline-start: 12px;
     text-align: center;
     font-family: Arial, sans-serif;
     color: white;
-    background-color: #d88d43;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -427,10 +432,10 @@ img {
 .gridconheca {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 
-.gridconheca img {
+.coluna-grid-fotos img {
     width: 100%;
     height: auto;
     border-radius: 10px;
