@@ -511,3 +511,26 @@ img {
 .contact-form button:hover {
     background-color: #c28b4b;
 }
+
+/* LAZER */
+
+p.lazer{
+    color: #000000;
+    text-align: justify;
+    font-size: 14px;
+}
+
+h5.lazer{
+    color: #000000;
+    text-align: center;
+}
+
+col.lazertexto{
+    padding-top: 80px;
+}
+
+img.lazer{
+    width: 300px;
+    height: auto;
+}
+
