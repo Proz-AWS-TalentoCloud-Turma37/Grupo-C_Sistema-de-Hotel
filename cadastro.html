@@ -20,13 +20,92 @@
             font-family: Arial, sans-serif;
         }
 
-        .form-container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: var(--secondary-color);
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .form-box {
+            background-color: #fff;
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #007bff;
+        }
+        
+        @media (max-width: 768px) {
+            .form-box {
+                padding: 20px;
+            }
+        
+            button {
+                font-size: 16px;
+            }
+        
+            header h1 {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .form-box {
+                padding: 15px;
+            }
+        
+            h2 {
+                font-size: 24px;
+            }
+        
+            button {
+                font-size: 14px;
+            }
+        
+            header h1 {
+                font-size: 18px;
+            }
         }
 
         #navbar {
@@ -112,13 +191,6 @@
             }
         }
         
-        .price-info {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-top: 20px;
-            color: var(--primary-color);
-        }
-
         .form-label {
             color: var(--primary-color);
             font-weight: 600;
@@ -139,22 +211,6 @@
             border-color: var(--accent-color);
         }
 
-        /* Estilização do Datepicker */
-        .ui-datepicker {
-            background-color: var(--secondary-color);
-            border: 1px solid var(--primary-color);
-        }
-
-        .ui-datepicker-header {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
-
-        .ui-datepicker .ui-state-active {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
-
         /* Logo estilização */
         .logo {
             width: 100px;
@@ -167,6 +223,14 @@
         .form-control {
             border: 2px solid var(--accent-color);
             border-radius: 4px;
+        }
+        footer {
+            background-color: #A0692F;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -190,77 +254,40 @@
     </header>
     <!-- Navegação -->
     <nav style="background-color: #a27921; padding: 0.5em; text-align: center;">
-        <a href="cadastro.html" style="color: white; margin: 0 1em; text-decoration: none;">CADASTRO</a>
+        <a href="reservaCalendario2.html" style="color: white; margin: 0 1em; text-decoration: none;">RESERVA</a>
         <a href="#" style="color: white; margin: 0 1em; text-decoration: none;">LOGIN</a>
         <a href="#" style="color: white; margin: 0 1em; text-decoration: none;">FAQ</a>
     </nav>
-    <div class="form-container">
-        <form id="form-reserva" action="#" method="POST">
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" name="nome" required>
-            </div>
-            <div class="mb-3">
-                <label for="data-checkin" class="form-label">Data de Check-in</label>
-                <input type="text" class="form-control" id="data-checkin" name="data-checkin" required>
-            </div>
-            <div class="mb-3">
-                <label for="data-checkout" class="form-label">Data de Check-out</label>
-                <input type="text" class="form-control" id="data-checkout" name="data-checkout" required>
-            </div>
-            <div class="mb-3">
-                <label for="quantidade-pessoas" class="form-label">Quantidade de Pessoas</label>
-                <input type="number" class="form-control" id="quantidade-pessoas" name="quantidade-pessoas" required>
-            </div>
-            
-            <div id="price-info" class="price-info text-center">
-                <p>Total: R$ 0,00</p>
-            </div>
 
-            <button type="submit" class="btn btn-success w-100">Reservar</button>
-        </form>
+    <div class="container">
+        <div class="form-box">
+            <h2>Cadastro</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirma_senha">Confirmar Senha</label>
+                    <input type="password" id="confirma_senha" name="confirma_senha" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            const precoPorNoite = 250.00;
-
-            $("#data-checkin, #data-checkout").datepicker({
-                dateFormat: "dd/mm/yy"
-            });
-
-            function calcularPreco() {
-                const checkin = $("#data-checkin").datepicker("getDate");
-                const checkout = $("#data-checkout").datepicker("getDate");
-
-                if (checkin && checkout) {
-                    const diffTime = checkout - checkin;
-                    const diffDays = diffTime / (1000 * 3600 * 24);
-
-                    if (diffDays > 0) {
-                        const total = diffDays * precoPorNoite;
-                        $("#price-info").html(`<p>Total: R$ ${total.toFixed(2)}</p>`);
-                    } else {
-                        $("#price-info").html(`<p style="color: red;">Selecione datas válidas.</p>`);
-                    }
-                } else {
-                    $("#price-info").html(`<p>Total: R$ 0,00</p>`);
-                }
-            }
-
-            $("#data-checkin, #data-checkout").on("change", function() {
-                calcularPreco();
-            });
-
-            $("#quantidade-pessoas").on("change", function() {
-                calcularPreco();
-            });
-        });
-    </script>
+    <footer>
+        <p> 2024 Pousada Talento Cloud.</p>
+    </footer>
 </body>
 </html>
