@@ -12,7 +12,7 @@
             --secondary-color: #fdfcfc;
             --terciary-color: #A0692F;
             --accent-color: #B17F5C;
-            --text-color: #333333;
+            --text-color: #b4b4b5;
         }
 
         body {
@@ -29,12 +29,89 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .header-title {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--primary-color);
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background-color: var(--terciary-color);
         }
-
+        #navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        #navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        #navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        #navbar-toggler {
+            padding: 0.25rem 0.75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        #navbarNav {
+            display: flex;
+            justify-content: flex-end;
+        }
+        #navbar-items {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-link {
+            background-color: #007bff;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #nav-link:hover {
+            background-color: #0056b3;
+        }
+        .nav-link:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            #navbar-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0;
+                margin: 0;
+            }
+            #navbarNav {
+                display: block;
+                margin-top: 10px;
+            }
+            .form-row {
+                flex-direction: column;
+            }
+            .form-column {
+                margin: 5px 0;
+            }
+            #search-box {
+                width: 90%;
+            }
+            #navbar-brand img {
+                visibility: hidden;
+            }
+        }
+        
         .price-info {
             font-size: 1.25rem;
             font-weight: bold;
@@ -94,12 +171,30 @@
     </style>
 </head>
 <body>
-    <header class="header-title" style="background-color: var(--terciary-color)">
-        <img href="https://imgbb.com/"><img src="https://i.ibb.co/Xz7dBFY/Captura-de-tela-2024-10-30-190347.png" alt="Captura-de-tela-2024-10-30-190347" style="width: 600px; height: 200px; justify-content:flex-start;" class="logo">        
+    <header style="text-align: center;">
+        <nav id="navbar">
+            <div id="navbar-container">
+                <a id="navbar-brand" href="#">
+                    <img src="Assets/rodapéLogo.01.bmp" style="width: 100%;" alt="Logo">
+                </a>
+                <h3 class="text-center mb-10" style="color: var(--text-color); font-size: 40px;">POUSADA TALENTO CLOUD</h3>
+                <div id="navbarNav">
+                    <ul id="navbar-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-
+    <!-- Navegação -->
+    <nav style="background-color: #a27921; padding: 0.5em; text-align: center;">
+        <a href="#" style="color: white; margin: 0 1em; text-decoration: none;">CADASTRO</a>
+        <a href="#" style="color: white; margin: 0 1em; text-decoration: none;">LOGIN</a>
+        <a href="#" style="color: white; margin: 0 1em; text-decoration: none;">FAQ</a>
+    </nav>
     <div class="form-container">
-        <h3 class="text-center mb-4" style="color: var(--primary-color);">Reserva de Pousada</h3>
         <form id="form-reserva" action="#" method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome Completo</label>

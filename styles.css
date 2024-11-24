@@ -62,7 +62,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #f8f9fa;
+    background-color: #A0692F;
 }
 #navbar-container {
     display: flex;
@@ -259,12 +259,12 @@ img {
 }
 .d-flex.flex-column.align-items-center {
     height: 100%;
-  }
-  
-  .img-fluid {
+}
+
+.img-fluid {
     max-width: 100%;
     height: auto;
-  }
+}
 
 .container .row {
     gap: 0 !important;
@@ -273,7 +273,7 @@ img {
 /* Seção de Rodapé */
 
 .footer {
-    background-color: #a66a3f; 
+    background-color: #a66a3f;
     color: #ffffff;
     padding: 30px;
     display: flex;
