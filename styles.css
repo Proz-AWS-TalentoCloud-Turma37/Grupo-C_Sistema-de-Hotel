@@ -273,7 +273,7 @@ img {
 /* Seção de Rodapé */
 
 .footer {
-    background-color: #a66a3f;
+    background-color: #A0692F;
     color: #ffffff;
     padding: 30px;
     display: flex;
@@ -373,7 +373,7 @@ img {
 .reserve-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #3cb3a6;
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -497,7 +497,7 @@ img {
 }
 
 .contact-form button {
-    background-color: #d4a45f;
+    background-color: #C49130;
     color: #fff;
     border:#000000;
     border-radius: 30px;
