@@ -1,65 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="Assets/Logo.hotel.bmp">
-    <title>Reserva - Pousada e Camping Talento Cloud</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+    <title>Reserva de Pousada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        :root {
+            --primary-color: #9B6546;
+            --secondary-color: #e8e6e6;
+            --terciary-color: #A0692F;
+            --accent-color: #B17F5C;
+            --text-color: #b4b4b5;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: var(--secondary-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background-color: var(--terciary-color);
+        }
+        #navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        #navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        #navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        #navbar-toggler {
+            padding: 0.25rem 0.75rem;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        #navbarNav {
+            display: flex;
+            justify-content: flex-end;
+        }
+        #navbar-items {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-link {
+            background-color: #007bff;
+            color: #fff;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #nav-link:hover {
+            background-color: #0056b3;
+        }
+        .nav-link:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            #navbar-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                padding: 0;
+                margin: 0;
+            }
+            #navbarNav {
+                display: block;
+                margin-top: 10px;
+            }
+            .form-row {
+                flex-direction: column;
+            }
+            .form-column {
+                margin: 5px 0;
+            }
+            #search-box {
+                width: 90%;
+            }
+            #navbar-brand img {
+                visibility: hidden;
+            }
+        }
+        
+        .price-info {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: var(--primary-color);
+        }
+
+        .form-label {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.2rem rgba(155, 101, 70, 0.25);
+        }
+
+        .btn-success {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-success:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Estilização do Datepicker */
+        .ui-datepicker {
+            background-color: var(--secondary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .ui-datepicker-header {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .ui-datepicker .ui-state-active {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Logo estilização */
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        /* Adicionar bordas aos inputs */
+        .form-control {
+            border: 2px solid var(--accent-color);
+            border-radius: 4px;
+        }
+    </style>
 </head>
+<body>
+    <header style="text-align: center;">
+        <nav id="navbar">
+            <div id="navbar-container">
+                <a id="navbar-brand" href="#">
+                    <img src="Assets/rodapéLogo.01.bmp" alt="Logo">
+                </a>
+                <h3 class="text-center mb-10" style="color: var(--text-color); font-size: 40px;">POUSADA TALENTO CLOUD</h3>
+                <div id="navbarNav">
+                    <ul id="navbar-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navegação -->
+    <nav style="background-color: #a27921; padding: 0.5em; text-align: center;">
+        <a href="cadastro.html" style="color: white; margin: 0 1em; text-decoration: none;">CADASTRO</a>
+        <a href="Login.html" style="color: white; margin: 0 1em; text-decoration: none;">LOGIN</a>
+        <a href="FAQ.html" style="color: white; margin: 0 1em; text-decoration: none;">FAQ</a>
+    </nav>
+    <div class="form-container">
+        <form id="form-reserva" action="#" method="POST">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="data-checkin" class="form-label">Data de Check-in</label>
+                <input type="text" class="form-control" id="data-checkin" name="data-checkin" required>
+            </div>
+            <div class="mb-3">
+                <label for="data-checkout" class="form-label">Data de Check-out</label>
+                <input type="text" class="form-control" id="data-checkout" name="data-checkout" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantidade-pessoas" class="form-label">Quantidade de Pessoas</label>
+                <input type="number" class="form-control" id="quantidade-pessoas" name="quantidade-pessoas" required>
+            </div>
+            
+            <div id="price-info" class="price-info text-center">
+                <p>Total: R$ 0,00</p>
+            </div>
 
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+            <button type="submit" class="btn btn-success w-100">Reservar</button>
+        </form>
+    </div>
 
-    <!-- PERGUNTAS FREQUENTES -->
-    <section class="FAQ">
-        <h3 class="FAQ">FAQ - PERGUNTAS FREQUENTES</h3><br><br>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-        <h5 class="FAQ">1. Quais são os horários de check-in e check-out?</h5>
-        <p class="FAQ">O check-in pode ser feito a partir das 14h, e o check-out deve ser realizado até as 12h. Para
-            horários
-            diferentes, entre em contato conosco com antecedência.</p><br>
+    <script>
+        $(document).ready(function() {
+            const precoPorNoite = 250.00;
 
-        <h5 class="FAQ">2. Vocês aceitam animais de estimação?</h5>
-        <p class="FAQ">Sim, aceitamos pets! Pedimos apenas que eles sejam supervisionados e que seus donos recolham os
-            resíduos.</p><br>
+            $("#data-checkin, #data-checkout").datepicker({
+                dateFormat: "dd/mm/yy"
+            });
 
-        <h5 class="FAQ">3. É necessário fazer reserva para o camping?</h5>
-        <p class="FAQ">Recomendamos que você faça uma reserva para garantir sua vaga, especialmente em períodos de alta
-            temporada e
-            feriados.</p><br>
+            function calcularPreco() {
+                const checkin = $("#data-checkin").datepicker("getDate");
+                const checkout = $("#data-checkout").datepicker("getDate");
 
-        <h5 class="FAQ">4. O camping possui estrutura para barracas e trailers?</h5>
-        <p class="FAQ">Sim! Temos áreas específicas para barracas, pontos de energia para trailers, banheiros com
-            chuveiros quentes e
-            pias para higienização.</p><br>
+                if (checkin && checkout) {
+                    const diffTime = checkout - checkin;
+                    const diffDays = diffTime / (1000 * 3600 * 24);
 
-        <h5 class="FAQ">5. É permitido fazer churrasco no camping?</h5>
-        <p class="FAQ">Sim, disponibilizamos áreas para churrasco equipadas com churrasqueira e mesas. É necessário
-            reservar o espaço
-            com antecedência.</p><br>
+                    if (diffDays > 0) {
+                        const total = diffDays * precoPorNoite;
+                        $("#price-info").html(`<p>Total: R$ ${total.toFixed(2)}</p>`);
+                    } else {
+                        $("#price-info").html(`<p style="color: red;">Selecione datas válidas.</p>`);
+                    }
+                } else {
+                    $("#price-info").html(`<p>Total: R$ 0,00</p>`);
+                }
+            }
 
-        <h5 class="FAQ">6. Há opções de transporte até a pousada/camping?</h5>
-        <p class="FAQ">Oferecemos estacionamento gratuito para hóspedes. Caso você não venha de carro, podemos ajudar a
-            organizar
-            transporte, como táxi ou transfer, mediante solicitação.</p><br>
+            $("#data-checkin, #data-checkout").on("change", function() {
+                calcularPreco();
+            });
 
-        <h5 class="FAQ">7. Como posso cancelar ou alterar minha reserva?</h5>
-        <p class="FAQ">Para cancelar ou alterar sua reserva, entre em contato conosco com pelo menos 48 horas de
-            antecedência. Consulte
-            nossa política de cancelamento para mais detalhes.</p><br>
-
-        <h5 class="FAQ">8. Posso levar alimentos e bebidas para o camping?</h5>
-        <p class="FAQ">Sim, é permitido trazer alimentos e bebidas, mas pedimos que sejam respeitadas as regras de
-            convivência e
-            limpeza das áreas comuns.</p>
-    </section>
-
+            $("#quantidade-pessoas").on("change", function() {
+                calcularPreco();
+            });
+        });
+    </script>
 </body>
-
 </html>
