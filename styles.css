@@ -46,7 +46,7 @@
     align-items: center;
 }
 #btn-pesquisar {
-    background-color: #007bff;
+    background-color: #020556;
     color: #fff;
     width: 100%;
     padding: 10px;
@@ -55,14 +55,14 @@
     cursor: pointer;
 }
 #btn-pesquisar:hover {
-    background-color: #0056b3;
+    background-color: #020556;
 }
 #navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #A0692F;
+    background-color: #683c13;
 }
 #navbar-container {
     display: flex;
@@ -98,7 +98,7 @@
     padding: 0;
 }
 .nav-link {
-    background-color: #007bff;
+    background-color: #030891;
     color: #fff;
     width: 100%;
     padding: 10px;
@@ -108,7 +108,7 @@
     text-decoration: none;
 }
 #nav-link:hover {
-    background-color: #0056b3;
+    background-color: #020687;
 }
 .nav-link:hover {
     color: rgba(0, 0, 0, 0.7);
@@ -273,7 +273,7 @@ img {
 /* Seção de Rodapé */
 
 .footer {
-    background-color: #A0692F;
+    background-color: #683c13;
     color: #ffffff;
     padding: 30px;
     display: flex;
@@ -407,7 +407,7 @@ img {
 }
 
 #sobre{
-    background-color: #d88d43;
+    background-color: #5d3c10;
     justify-items: center;
 }
 
