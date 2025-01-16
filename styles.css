@@ -287,7 +287,7 @@ img {
 }
 
 .footer-logo img {
-    width: 120px; 
+    width: 120px;
 }
 
 .footer-logo h2 {
@@ -462,7 +462,7 @@ img {
 }
 .contact-section {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     padding: 2em;
     background-color: #f9f9f9;
 }
@@ -529,10 +529,20 @@ col.lazertexto{
     padding-top: 80px;
 }
 
-img.lazer{
+img.lazer {
     width: 300px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.col.Lazer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* <!-- PERGUNTAS FREQUENTES --> */
 
