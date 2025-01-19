@@ -13,28 +13,103 @@
     <!-- Bootstrap css Icons-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
-    #fontetitulocabecalho{
-        color: #d6d6d6;
-        font-family: 'Lavishly Yours', serif, bold;
-        font-weight: 500;
-        font-size: 80px;
-    }
-    #corfooter, #colorcabecalho {
-        background-color: #3A3B39;
-    }
-    #colormenu, #cordireitosfooter{
-        background-color: #5b3f25;
-    }
-    .btn-cor{
-        background-color: #3A3B39;
-        border-color: #fff;
-        color: #fff
-    }
-    .btn-cor:hover{
-        background-color: #5b3f25;
-        border-color: #fff;
-        color: #fff
-    }
+        #formulariodologin{
+            margin: 0;
+            padding: 0;
+            height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5; /* Cor de fundo */
+        }
+
+        #fontetitulocabecalho {
+            color: #d6d6d6;
+            font-family: 'Lavishly Yours', serif, bold;
+            font-weight: 500;
+            font-size: 80px;
+        }
+
+        #corfooter, #colorcabecalho {
+            background-color: #202b18dc;
+        }
+
+        #colormenu, #cordireitosfooter {
+            background-color: #21351e;
+        }
+
+        .btn-cor {
+            background-color: #202b18dc;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .btn-cor:hover {
+            background-color: #21481a;
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .login-container {
+            background-color: #6c69659a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .login-container h1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .login-container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #282727;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #2e1e0f;
+            border-radius: 5px;
+            background-color: #dfdfdf;
+            color: rgb(0, 0, 0);
+        }
+
+        .login-container input::placeholder {
+            color: #777;
+        }
+
+        .login-container a {
+            color: #32453a;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            #fontetitulocabecalho {
+                font-size: 1.5rem;
+            }
+
+            .login-container {
+                padding: 20px;
+            }
+
+            .login-container h1 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -66,76 +141,88 @@
             </ul>
         </header>
     </section>
-    <section>
-        <div class="container">
-            <div class="form-box">
-                <h2>Login</h2>
-                <!-- Formulário de Login -->
-                <form action="#" method="POST" novalidate>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 mb-3">Entrar</button>
-                </form>
-                <!-- Botão de Login com o Google -->
-                <div id="googleLoginButton" class="mb-3"></div>
-                <button class="btn-google mb-3" id="googleLogin" onclick="handleGoogleLogin()">Entrar com Google</button>
-                <!-- Botão para abrir o modal -->
-                <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#infoModal">
-                    Mais Informações
-                </button>
-            </div>
-        </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="infoModalLabel">Sobre a Pousada</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Bem-vindo à Pousada Talento Cloud! A sua melhor escolha para descanso e lazer. Entre com suas credenciais para aproveitar todos os benefícios.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-            </div>
-        </div>
+    <!-- Formulário de Login -->
+    <section id="formulariodologin">
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <p>Digite seu email e senha para continuar!</p>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <a href="#">Esqueceu sua senha?</a>
+            <button type="submit" class="btn btn-cor">Entrar</button>
+        </form>
+        <div id="alert-container"></div>
     </div>
+
+    <!-- JavaScript -->
+    <script>
+        const form = document.getElementById('login-form');
+        const alertContainer = document.getElementById('alert-container');
+
+        // Exibir alertas
+        function showAlert(type, message) {
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type} alert-dismissible fade show mt-3`;
+            alert.role = 'alert';
+            alert.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            alertContainer.appendChild(alert);
+
+            setTimeout(() => alert.remove(), 4000);
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alertContainer.innerHTML = '';
+
+            const email = form.email.value;
+            const password = form.password.value;
+            let isValid = true;
+
+            if (!email.includes('@')) {
+                showAlert('danger', 'Insira um email válido.');
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                showAlert('danger', 'A senha deve ter pelo menos 6 caracteres.');
+                isValid = false;
+            }
+
+            if (isValid) showAlert('success', 'Login realizado com sucesso!');
+        });
+    </script>
     </section>
     <!-- Rodapé -->
-
     <footer id="corfooter" class="text-center text-lg-start mt-5  text-muted pt-3">
         <section  class="text-white">
         <div class="container text-center text-md-start mt-5">
             <div class="row mt-3">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="bi bi-gem me-3"></i>Salão de Beleza
+                        <i class="bi bi-calendar-heart"></i>  Pousada Talento Cloud
                     </h6>
                     <p>
-                        Cuidamos de você com amor e dedicação. Venha nos visitar!
+                        A sua melhor escolha para descanso e lazer.
                     </p>
                         <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
                         <p><i class="bi bi-house me-3"></i> Rua Exemplo, 123, Cidade</p>
-                        <p><i class="bi bi-envelope me-3"></i> contato@salaodebeleza.com</p>
+                        <p><i class="bi bi-envelope me-3"></i> contato@pousadatalento.com</p>
                         <p><i class="bi bi-phone me-3"></i> +55 12 3456-7890</p>
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 pe-2">
                     <h6 class="text-uppercase fw-bold mb-4">
                         <i class="bi bi-link"></i> Links úteis
                     </h6>
-                    <p><a href="#inicio" class="text-reset">Início</a></p>
-                    <p><a href="#sobre" class="text-reset">Sobre</a></p>
-                    <p><a href="#servicos" class="text-reset">Serviços</a></p>
-                    <p><a href="#faq" class="text-reset">FAQ</a></p>
+                    <p><a href="./index.html" class="text-reset">Início</a></p>
+                    <p><a href="./PaginaReserva.html" class="text-reset">Reserva</a></p>
+                    <p><a href="./cadastro.html" class="text-reset">Cadastro</a></p>
+                    <p><a href="./Login.html" class="text-reset">Login</a></p>
+                    <p><a href="./FAQ.html" class="text-reset">FAQ</a></p>
                 </div>
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
                     <div class="me-5 d-none d-lg-block">
@@ -154,18 +241,5 @@
         © 2025  Pousada Talento Cloud. Todos os direitos reservados.
     </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script>
-            
-        // Função para manipular o login com o Google
-        function handleGoogleLogin() {
-            alert("Login com Google em desenvolvimento. Redirecionar para a página de autenticação.");
-        }
-    </script>
-    
-    </body>
-    
-    </html>
+</body>
+</html>
