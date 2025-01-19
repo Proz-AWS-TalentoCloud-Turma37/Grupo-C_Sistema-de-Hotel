@@ -1,211 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reserva de Pousada</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lavishly+Yours&display=swap" rel="stylesheet">
-        <style>
-            :root {
-                --primary-color: #9B6546;
-                --secondary-color: #e8e6e6;
-                --terciary-color: #683c13ce;
-                --accent-color: #B17F5C;
-                --text-color: #ffffff;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Pousada Talento Cloud</title>
+    <!--CSS DO BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--SCRIPT DO CSS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!--Fonte Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <!-- Bootstrap css Icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+    #fontetitulocabecalho{
+        color: #d6d6d6;
+        font-family: 'Lavishly Yours', serif, bold;
+        font-weight: 500;
+        font-size: 80px;
+    }
+    #corfooter, #colorcabecalho {
+        background-color: #3A3B39;
+    }
+    #colormenu, #cordireitosfooter{
+        background-color: #5b3f25;
+    }
+    .btn-cor{
+        background-color: #3A3B39;
+        border-color: #fff;
+        color: #fff
+    }
+    .btn-cor:hover{
+        background-color: #5b3f25;
+        border-color: #fff;
+        color: #fff
+    }
     
-            body {
-                background-color: #f4f4f4;
-                font-family: Arial, sans-serif;
-            }
-
-        .form-container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: var(--secondary-color);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        #navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            background-color: var(--terciary-color);
-        }
-        #navbar-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-        #navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-        #navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
-        }
-        #navbar-toggler {
-            padding: 0.25rem 0.75rem;
-            font-size: 1.25rem;
-            line-height: 1;
-            background-color: transparent;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 0.25rem;
-            cursor: pointer;
-        }
-        #navbarNav {
-            display: flex;
-            justify-content: flex-end;
-        }
-        #navbar-items {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .nav-link {
-            background-color: #007bff;
-            color: #fff;
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        #nav-link:hover {
-            background-color: #0056b3;
-        }
-        .nav-link:hover {
-            color: rgba(0, 0, 0, 0.7);
-        }
-        @media (max-width: 768px) {
-            #navbar-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                padding: 0;
-                margin: 0;
-            }
-            #navbarNav {
-                display: block;
-                margin-top: 10px;
-            }
-            .form-row {
-                flex-direction: column;
-            }
-            .form-column {
-                margin: 5px 0;
-            }
-            #search-box {
-                width: 90%;
-            }
-            #navbar-brand img {
-                visibility: hidden;
-            }
-        }
-        
-        .price-info {
-            font-size: 1.25rem;
-            font-weight: bold;
-            margin-top: 20px;
-            color: var(--primary-color);
-        }
-
-        .form-label {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .form-control:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 0.2rem rgba(155, 101, 70, 0.25);
-        }
-
-        .btn-success {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-success:hover {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
-        }
-
-        /* Estilização do Datepicker */
-        .ui-datepicker {
-            background-color: var(--secondary-color);
-            border: 1px solid var(--primary-color);
-        }
-
-        .ui-datepicker-header {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
-
-        .ui-datepicker .ui-state-active {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
-
-        /* Logo estilização */
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            display: block;
-        }
-
-        /* Adicionar bordas aos inputs */
-        .form-control {
-            border: 2px solid var(--accent-color);
-            border-radius: 4px;
-        }
-        footer {
-            background-color: var(--terciary-color);
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-            width: 100%;
-            bottom: 0;
-        }
     </style>
 </head>
 <body>
-    <header style="text-align: center;">
-        <nav id="navbar">
-            <div id="navbar-container">
-                <a id="navbar-brand" href="#">
-                    <img src="Assets/rodapéLogo.01.bmp" alt="Logo">
-                </a>
-                <h3 style="color: #d6d6d6;
-                font-family: 'Lavishly Yours', serif, bold;
-                font-weight: 500;
-                font-size: 80px; display: flex; justify-content: center; align-items: center;">Pousada Talento Cloud</h3>
-                <div id="navbarNav">
-                    <ul id="navbar-items">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                    </ul>
+    <!--Início do Menu-->
+    <section id="menu">
+        <div class="container-fluid p-0">
+            <div id="colorcabecalho" class="d-flex justify-content-around aling-center">
+                <div class="mt-4">
+                    <a class="d-flex justify-content-start" href="#">
+                        <img src="Assets/rodapéLogo.01.bmp" alt="Logo">
+                    </a>
+                </div>
+                <div>
+                    <h3 id="fontetitulocabecalho" class="d-flex justify-content-center">Pousada Talento Cloud</h3>
+                </div>
+                <div class="mt-4">
+                    <a href="index.html" type="button" class="btn btn-cor"> Home </a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Navegação -->
-    <nav style="background-color: #5b3f25; padding: 0.5em; text-align: center;">
-        <a href="cadastro.html" style="color: white; margin: 0 1em; text-decoration: none;">CADASTRO</a>
-        <a href="Login.html" style="color: white; margin: 0 1em; text-decoration: none;">LOGIN</a>
-        <a href="FAQ.html" style="color: white; margin: 0 1em; text-decoration: none;">FAQ</a>
-    </nav>
+            <header id="colormenu" class="d-flex justify-content-center py-1">
+            <ul class="nav nav-pills">
+                <li class="nav-item text-white"><a href="./PaginaReserva.html" class="nav-link  text-white">RESERVA</a></li>
+                <li class="nav-item"><a href="./cadastro.html" class="nav-link  text-white">CADASTRO</a></li>
+                <li class="nav-item"><a href="./Login.html" class="nav-link  text-white">LOGIN</a></li>
+            </ul>
+            </header>
+            </div>
+
+    </section>
     <div class="form-container">
         <form id="form-reserva" action="#" method="POST">
             <div class="mb-3">
@@ -274,9 +133,62 @@
             });
         });
     </script>
+    <!-- Rodapé -->
 
-    <footer>
-        <p> 2024 Pousada Talento Cloud.</p>
+    <footer id="corfooter" class="text-center text-lg-start mt-5  text-muted pt-3">
+        <section  class="text-white">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="bi bi-gem me-3"></i>Salão de Beleza
+                    </h6>
+                    <p>
+                        Cuidamos de você com amor e dedicação. Venha nos visitar!
+                    </p>
+                        <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
+                        <p><i class="bi bi-house me-3"></i> Rua Exemplo, 123, Cidade</p>
+                        <p><i class="bi bi-envelope me-3"></i> contato@salaodebeleza.com</p>
+                        <p><i class="bi bi-phone me-3"></i> +55 12 3456-7890</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 pe-2">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="bi bi-link"></i> Links úteis
+                    </h6>
+                    <p><a href="#inicio" class="text-reset">Início</a></p>
+                    <p><a href="#sobre" class="text-reset">Sobre</a></p>
+                    <p><a href="#servicos" class="text-reset">Serviços</a></p>
+                    <p><a href="#faq" class="text-reset">FAQ</a></p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
+                    <div class="me-5 d-none d-lg-block">
+                        <span>Conecte-se conosco nas redes sociais:</span>
+                    </div>
+                    <div class="me-5 d-none d-lg-block">
+                        <a href="#" class="me-4 text-reset"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-4 text-reset"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="me-4 text-reset"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="me-4 text-reset"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div id="cordireitosfooter" class="text-center p-4 text-white" >
+        © 2025  Pousada Talento Cloud. Todos os direitos reservados.
+    </div>
     </footer>
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+            
+        // Função para manipular o login com o Google
+        function handleGoogleLogin() {
+            alert("Login com Google em desenvolvimento. Redirecionar para a página de autenticação.");
+        }
+    </script>
+    
+    </body>
+    
+    </html>
