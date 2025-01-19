@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Talento Cloud</title>
     <!--CSS DO BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--SCRIPT DO CSS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--SCRIPT DO BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <!--Fonte Google-->
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lavishly+Yours&display=swap" rel="stylesheet">
     <!-- Bootstrap css Icons-->
@@ -39,7 +39,7 @@
     </style>
 </head>
 <body>
-    <!--Início do Menu-->
+    <!--Cabeçalho-->
     <section id="menu">
         <div class="container-fluid p-0">
             <div id="colorcabecalho" class="d-flex justify-content-around aling-center">
@@ -55,15 +55,17 @@
                     <a href="index.html" type="button" class="btn btn-cor"> Home </a>
                 </div>
             </div>
-            <header id="colormenu" class="d-flex justify-content-center py-1">
+        </div>
+    </section>
+    <!--Barra de Menu-->
+    <section id="colormenu" class="sticky-top d-flex justify-content-center py-1">
+        <header >
             <ul class="nav nav-pills">
                 <li class="nav-item text-white"><a href="./PaginaReserva.html" class="nav-link  text-white">RESERVA</a></li>
-                <li class="nav-item"><a href="./cadastro.html" class="nav-link  text-white">CADASTRO</a></li>
                 <li class="nav-item"><a href="./Login.html" class="nav-link  text-white">LOGIN</a></li>
+                <li class="nav-item"><a href="./FAQ.html" class="nav-link  text-white">FAQ</a></li>
             </ul>
-            </header>
-            </div>
-
+        </header>
     </section>
     <div class="container">
         <form class="row g-3 needs-validation" novalidate>
@@ -73,43 +75,43 @@
             <input type="text" class="form-control" id="validationCustom01" value="Primeiro Nome" required>
             <div class="valid-feedback">
                 Tudo certo!
-              </div>
             </div>
-          
+            </div>
+        
             <!-- Último Nome -->
             <div class="col-md-4">
-              <label for="validationCustom02" class="form-label">Último Nome</label>
-              <input type="text" class="form-control" id="validationCustom02" value="Último Nome" required>
-              <div class="valid-feedback">
+            <label for="validationCustom02" class="form-label">Último Nome</label>
+            <input type="text" class="form-control" id="validationCustom02" value="Último Nome" required>
+            <div class="valid-feedback">
                 Tudo certo!
-              </div>
             </div>
-          
+            </div>
+        
             <!-- Nome de usuário -->
             <div class="col-md-4">
-              <label for="validationCustomUsername" class="form-label">Nome de usuário</label>
-              <div class="input-group has-validation">
+            <label for="validationCustomUsername" class="form-label">Nome de usuário</label>
+            <div class="input-group has-validation">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
                 <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
-                  Por favor, escolha um nome de usuário.
+                Por favor, escolha um nome de usuário.
                 </div>
-              </div>
             </div>
-          
+            </div>
+        
             <!-- Cidade -->
             <div class="col-md-6">
-              <label for="validationCustom03" class="form-label">Cidade</label>
-              <input type="text" class="form-control" id="validationCustom03" required>
-              <div class="invalid-feedback">
+            <label for="validationCustom03" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
                 Por favor, informe uma cidade.
-              </div>
             </div>
-          
+            </div>
+        
             <!-- Estado -->
             <div class="col-md-3">
-              <label for="validationCustom04" class="form-label">Estado</label>
-              <select class="form-select" id="validationCustom04" required>
+            <label for="validationCustom04" class="form-label">Estado</label>
+            <select class="form-select" id="validationCustom04" required>
                 <option selected disabled value="">Escolha...</option>
                 <option>Acre</option>
                 <option>Alagoas</option>
@@ -138,68 +140,67 @@
                 <option>São Paulo</option>
                 <option>Sergipe</option>
                 <option>Tocantins</option>
-              </select>
-              <div class="invalid-feedback">
+            </select>
+            <div class="invalid-feedback">
                 Por favor, escolha um Estado.
-              </div>
             </div>
-          
+            </div>
+        
             <!-- CEP -->
             <div class="col-md-3">
-              <label for="validationCustom05" class="form-label">CEP</label>
-              <input type="text" class="form-control" id="validationCustom05" required>
-              <div class="invalid-feedback">
+            <label for="validationCustom05" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="validationCustom05" required>
+            <div class="invalid-feedback">
                 Por favor, forneça um CEP válido.
-              </div>
             </div>
-          
+            </div>
+        
             <!-- Termos e Regras -->
             <div class="col-12">
-              <div class="form-check">
+            <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                 <label class="form-check-label" for="invalidCheck">
-                  Aceito os termos e regras do FAQ.
+                Aceito os termos e regras do FAQ.
                 </label>
                 <div class="invalid-feedback">
-                  Os termos e regras devem ser aceitos para concluir o cadastro.
+                Os termos e regras devem ser aceitos para concluir o cadastro.
                 </div>
-              </div>
             </div>
-          
+            </div>
+        
             <!-- Botão de Enviar -->
             <div class="col-12">
-              <button class="btn btn-primary" type="submit">Enviar</button>
+            <button class="btn btn-primary" type="submit">Enviar</button>
             </div>
-          </form>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-          <script>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <script>
             // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
     'use strict'
-  
+
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
-  
+
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
+    form.addEventListener('submit', event => {
         if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+        event.preventDefault()
+        event.stopPropagation()
         }
-  
+
         form.classList.add('was-validated')
-      }, false)
+    }, false)
     })
-  })()
+})()
         </script>
         </div>
     </div>
     <!-- Rodapé -->
-
     <footer id="corfooter" class="text-center text-lg-start mt-5  text-muted pt-3">
         <section  class="text-white">
         <div class="container text-center text-md-start mt-5">
