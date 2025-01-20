@@ -1,215 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pousada e Camping Talento Cloud</title>
     <!-- CSS do Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Script do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <!-- Fonte Google -->
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lavishly+Yours&display=swap" rel="stylesheet">
     <!-- Bootstrap Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #eeeeee;
+        :root {
+            --primary-green: rgba(32, 43, 24, 0.9);
+            --dark-green: #21351e;
+            --hover-green: #21481a;
+            --light-gray: #eeeeee;
+            --white: #f8f8f8;
+            --title-color: #d6d6d6;
         }
 
-        #fontetitulocabecalho {
-            color: #d6d6d6;
+        body {
+            background-color: var(--light-gray);
+        }
+
+        .brand-title {
+            color: var(--light-gray);
             font-family: 'Lavishly Yours', serif;
             font-weight: 500;
             font-size: 4rem;
-            text-align: center;
         }
 
-        #colorcabecalho, #corfooter {
-            background-color: rgba(32, 43, 24, 0.9);
+        .bg-primary-green {
+            background-color: var(--primary-green) !important;
         }
 
-        #colormenu, #cordireitosfooter{
-            background-color: #21351e;
+        .bg-dark-green {
+            background-color: var(--dark-green) !important;
         }
 
-        .btn-cor {
-            background-color: rgba(32, 43, 24, 0.9);
-            border-color: #fff;
-            color: #fff;
+        .btn-custom {
+            background-color: var(--primary-green);
+            border-color: var(--white);
+            color: var(--white);
+            transition: all 0.3s ease;
         }
 
-        .btn-cor:hover {
-            background-color: #21481a;
-            color: #fff;
+        .btn-custom:hover {
+            background-color: var(--hover-green);
+            color: var(--white);
         }
 
         #hero {
             background-image: url('./Assets/cabecalho/waterfall-3178574_1280.jpg');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            min-height: 400px;
             display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             align-items: center;
-            justify-content: center;
-            color: white;
+            padding: 2rem;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
+        .hero-search {
+            background-color: rgba(255, 255, 255, 0);
+            padding: 2rem;
+            border-radius: 10px;
         }
 
         .contact-form {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(161, 145, 121, 0.712);
             padding: 2rem;
             border-radius: 0.5rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #000;
         }
 
-        .sobre-foto img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-green);
         }
 
-        @media (max-width: 768px) {
-            #fontetitulocabecalho {
-                font-size: 2.5rem;
-            }
-
-            #hero {
-                height: 300px;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-        }.footer-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        .footer {
+            background-color: var(--primary-green);
+            color: var(--white) !important;
         }
 
-        .footer-links a:hover {
-            color: var(--light-gray);
-            text-decoration: underline;
+        .footer-dark {
+            background-color: var(--dark-green);
+            color: var(--white) !important;
         }
 
-        .social-icons a {
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            color: #fff;
-            transition: all 0.3s ease;
+        #contato {
+            background-position: center;
+            background-size:cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 0;
         }
 
-        .social-icons a:hover {
-            color: var(--light-gray);
-        }
-
-        @media (max-width: 768px) {
-            .brand-title {
-                font-size: 2rem;
-            }
-
-            .form-container {
-                margin: 1rem;
-                padding: 1rem;
-            }
-        }
-        .modal-custom .modal-content {
-            background-color: #f8f9fa;
-            border-radius: 15px;
-        }
-    
-        .modal-custom .modal-header {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 15px 15px 0 0;
-        }
-    
-        .modal-custom .modal-footer {
-            border-top: none;
-        }
-    
-        .success-icon {
-            font-size: 4rem;
-            color: #198754;
-            margin-bottom: 1rem;
-        }
-    
-        .modal-custom .modal-body {
-            padding: 2rem;
+        #contato .container {
+            display: flex;
+            justify-content: end;
             text-align: center;
         }
     </style>
+    <!--CSS DO MODAL DE LOGIN-->
+    <style>
+        :root {
+            --primary-color: #202b18dc;
+            --secondary-color: #21351e;
+            --hover-color: #21481a;
+        }
+    
+        .login-container {
+            background-color: rgba(108, 105, 101, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+    
+        .login-container input {
+            background-color: rgba(223, 223, 223, 0.9);
+            border: 1px solid #2e1e0f;
+            transition: all 0.3s ease;
+        }
+    
+        .login-container input:focus {
+            background-color: #f6f6f6;
+            box-shadow: 0 0 0 0.25rem rgba(32, 43, 24, 0.25);
+            border-color: var(--primary-color);
+        }
+    
+        .btn-custom {
+            background-color: var(--primary-color);
+            border-color: #fff;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+    
+        .btn-custom:hover {
+            background-color: var(--hover-color);
+            border-color: #fff;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
-
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Cabeçalho -->
     <section id="menu">
         <div class="container-fluid p-0">
-            <div id="colorcabecalho" class="d-flex justify-content-around align-items-center">
+            <div class="bg-primary-green d-flex justify-content-around align-items-center">
                 <div class="mt-4">
                     <a href="#">
                         <img src="Assets/rodapéLogo.01.bmp" alt="Logo" class="img-fluid">
                     </a>
                 </div>
                 <div>
-                    <h3 id="fontetitulocabecalho">Pousada Talento Cloud</h3>
+                    <h3 class="brand-title">Pousada Talento Cloud</h3>
                 </div>
                 <div class="mt-4">
-                    <a href="./PaginaReserva.html" class="btn btn-cor">RESERVA</a>
+                    <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <i class="bi bi-person-fill"></i> LOGIN
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Modal de Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content login-container">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-white" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center text-white mb-4">Digite seu email e senha para continuar!</p>
+                
+                <form id="login-form" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um email válido.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input type="password" class="form-control" id="password" placeholder="Senha" required>
+                            <div class="invalid-feedback">
+                                A senha deve ter pelo menos 6 caracteres.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="text-white small">Esqueceu sua senha?</a>
+                    </div>
+                    <button type="submit" class="btn btn-custom w-100">
+                        <i class="bi bi-box-arrow-in-right"></i> Entrar
+                    </button>
+                </form>
+                <div id="alert-container" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Barra de Menu -->
-    <section id="colormenu" class="sticky-top d-flex justify-content-center py-1">
-        <header>
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="#pousada" class="nav-link text-white">Sobre a Pousada</a></li>
-                <li class="nav-item"><a href="#home" class="nav-link text-white">Nossos Quartos e Suítes</a></li>
-                <li class="nav-item"><a href="#lazer" class="nav-link text-white">Lazer</
-                <li class="nav-item"><a href="#servicos" class="nav-link text-white">Serviços</a></li>
-                <li class="nav-item"><a href="#sobre" class="nav-link text-white">Conheça Nosso Hotel</a></li>
-                <li class="nav-item"><a href="#avaliacoes" class="nav-link text-white">Depoimentos</a></li>
-                <li class="nav-item"><a href="#contato" class="nav-link text-white">Fale Conosco</a></li>
-            </ul>
+    <section class="bg-dark-green sticky-top py-2">
+        <header class="container-fluid">
+            <nav class="d-flex justify-content-around aling-items-around">
+                <ul class="nav nav-pills mb-0">
+                    <li class="nav-item"><a href="#pousada" class="nav-link text-white">Sobre a Pousada</a></li>
+                    <li class="nav-item"><a href="#home" class="nav-link text-white">Nossos Quartos e Suítes</a></li>
+                    <li class="nav-item"><a href="#lazer" class="nav-link text-white">Lazer</a></li>
+                    <li class="nav-item"><a href="#servicos" class="nav-link text-white">Serviços</a></li>
+                    <li class="nav-item"><a href="#sobre" class="nav-link text-white">Conheça Nosso Hotel</a></li>
+                    <li class="nav-item"><a href="#avaliacoes" class="nav-link text-white">Depoimentos</a></li>
+                    <li class="nav-item"><a href="#contato" class="nav-link text-white">Fale Conosco</a></li>
+                    <li class="nav-item"><a href="./PaginaReserva.html" class="nav-link nav-btn-reserva btn-custom">RESERVA</a></li>
+                </ul>
+            </nav>
         </header>
     </section>
 
-    <!-- Seção principal -->
+    <!-- Seção Hero -->
     <section id="hero" class="image-fluid">
-        <div class="container text-center">
-            <h2 class="mb-4 text-white">Bem-vindo ao Paraíso</h2>
-            <form class="row g-2 justify-content-center">
-                <div class="col-md-2">
-                    <input type="date" class="form-control" placeholder="Check-in">
-                </div>
-                <div class="col-md-2">
-                    <input type="date" class="form-control" placeholder="Check-out">
-                </div>
-                <div class="col-md-2">
-                    <select class="form-select">
-                        <option selected>Hóspedes</option>
-                        <option value="1">1 Hóspede</option>
-                        <option value="2">2 Hóspedes</option>
-                        <option value="3">3 Hóspedes</option>
-                        <option value="4">4 Hóspedes</option>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <input type="text" class="form-control" placeholder="Cupom">
-                </div>
-                <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary w-100">Pesquisar</button>
-                </div>
-            </form>
+        <div class="text-center text-white mb-4">
+            <h2>Bem-vindo ao Paraíso</h2>
         </div>
+        <form class="hero-search row g-2 justify-content-center" action="PaginaReserva.html" method="get">
+            <div class="col-md-2">
+                <input type="date" name="checkin" class="form-control" placeholder="Check-in" required>
+            </div>
+            <div class="col-md-2">
+                <input type="date" name="checkout" class="form-control" placeholder="Check-out" required>
+            </div>
+            <div class="col-md-2">
+                <select name="hospedes" class="form-select" required>
+                    <option value="" disabled selected>Hóspedes</option>
+                    <option value="1">1 Hóspede</option>
+                    <option value="2">2 Hóspedes</option>
+                    <option value="3">3 Hóspedes</option>
+                    <option value="4">4 Hóspedes</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input type="text" name="cupom" class="form-control" placeholder="Cupom">
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-custom w-100">Pesquisar</button>
+            </div>
+        </form>
     </section>
 
     <!-- Seção SOBRE A POUSADA -->
@@ -375,31 +430,33 @@
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="py-5" style="background-image: url('./Assets/faleConosco.01.png'); background-size: cover; color: white;">
-        <div class="container d-flex justify-content-between">
-            <form class="contact-form">
-                <h2>Fale Conosco</h2>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nome:</label>
-                    <input type="text" id="name" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-mail:</label>
-                    <input type="email" id="email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensagem:</label>
-                    <textarea id="message" rows="4" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
+    <!-- Seção Fale Conosco -->
+    <section id="contato" style="background-image: url('./Assets/faleConosco.01.png');">
+        <div class="container">
+            <div class="col-md-4">
+                <form class="contact-form">
+                    <h2>Fale Conosco</h2>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome:</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensagem:</label>
+                        <textarea id="message" rows="4" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-custom">Enviar</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Rodapé -->
-    <footer id="corfooter" class="text-center text-lg-start mt-5 text-muted pt-3">
-        <section class="text-white">
+    <footer class="footer text-center text-lg-start mt-5 pt-3">
+        <section>
             <div class="container text-center text-md-start mt-5">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -412,47 +469,87 @@
                         <p><i class="bi bi-envelope me-3"></i> contato@pousadatalento.com</p>
                         <p><i class="bi bi-phone me-3"></i> +55 12 3456-7890</p>
                     </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 pe-2">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="bi bi-link"></i> Links úteis
-                    </h6>
-                    <p><a href="./index.html" class="text-reset">Início</a></p>
-                    <p><a href="./PaginaReserva.html" class="text-reset">Reserva</a></p>
-                    <p><a href="./cadastro.html" class="text-reset">Cadastro</a></p>
-                    <p><a href="./Login.html" class="text-reset">Login</a></p>
-                    <p><a href="./FAQ.html" class="text-reset">FAQ</a></p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
-                    <div class="me-5 d-none d-lg-block">
-                        <span>Conecte-se conosco nas redes sociais:</span>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="bi bi-link"></i> Links úteis
+                        </h6>
+                        <p><a href="./index.html" class="text-reset">Início</a></p>
+                        <p><a href="./PaginaReserva.html" class="text-reset">Reserva</a></p>
+                        <p><a href="./cadastro.html" class="text-reset">Cadastro</a></p>
+                        <p><a href="./Login.html" class="text-reset">Login</a></p>
+                        <p><a href="./FAQ.html" class="text-reset">FAQ</a></p>
                     </div>
-                    <div class="me-5 d-none d-lg-block">
-                        <a href="#" class="me-4 text-reset"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-4 text-reset"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="me-4 text-reset"><i class="bi bi-youtube"></i></a>
-                        <a href="#" class="me-4 text-reset"><i class="bi bi-whatsapp"></i></a>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center">
+                        <div class="mb-4">
+                            <span>Conecte-se conosco nas redes sociais:</span>
+                        </div>
+                        <div class="social-icons">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-youtube"></i></a>
+                            <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="footer-dark text-center p-4">
+            <small>© 2025 Pousada Talento Cloud. Todos os direitos reservados.</small>
         </div>
-    </section>
-    <div id="cordireitosfooter" class="text-center p-4 text-white">
-        <small>© 2025 Pousada Talento Cloud. Todos os direitos reservados.</small>
-    </div>
-</footer>
+    </footer>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Função para manipular o login com o Google
-    function handleGoogleLogin() {
-        alert("Login com Google em desenvolvimento. Redirecionar para a página de autenticação.");
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('login-form');
+        const alertContainer = document.getElementById('alert-container');
+
+        function showAlert(type, message) {
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type} alert-dismissible fade show`;
+            alert.innerHTML = `
+                <i class="bi ${type === 'success' ? 'bi-check-circle' : 'bi-exclamation-triangle'} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            `;
+            alertContainer.innerHTML = '';
+            alertContainer.appendChild(alert);
+
+            setTimeout(() => {
+                alert.classList.add('fade');
+                setTimeout(() => alert.remove(), 300);
+            }, 4000);
+        }
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const email = form.email.value;
+            const password = form.password.value;
+            let isValid = true;
+
+            form.classList.add('was-validated');
+
+            if (!email.includes('@') || !email.includes('.')) {
+                showAlert('danger', 'Por favor, insira um email válido.');
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                showAlert('danger', 'A senha deve ter pelo menos 6 caracteres.');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Se o login falhar, redireciona para a página de login
+                window.location.href = './Login.html';
+            }
+        });
+    });
 </script>
 </body>
-
 </html>

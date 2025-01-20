@@ -115,6 +115,24 @@
                 padding: 1rem;
             }
         }
+        .confirmationModal {
+            background-color: rgba(123, 119, 112, 0.717);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+        }
+    
+        .confirmationModal input {
+            background-color: rgba(223, 223, 223, 0.9);
+            border: 1px solid #2e1e0f;
+            transition: all 0.3s ease;
+        }
+    
+        .confirmationModal input:focus {
+            background-color: #f6f6f6;
+            box-shadow: 0 0 0 0.25rem rgba(32, 43, 24, 0.25);
+            border-color: var(--primary-color);
+        }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -175,7 +193,7 @@
                     <p class="m-0">Total: R$ 0,00</p>
                 </div>
 
-                <button type="submit" class="btn btn-cor w-100">Reservar</button>
+                <button type="submit" class="btn btn-custom w-100">Reservar</button>
             </form>
             </div>
         </div>
@@ -194,7 +212,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-cor" id="confirmReservation">Confirmar Reserva</button>
+                    <button type="button" class="btn btn-custom" id="confirmReservation">Confirmar Reserva</button>
                 </div>
             </div>
         </div>
@@ -240,8 +258,7 @@
             <small>© 2025 Pousada Talento Cloud. Todos os direitos reservados.</small>
         </div>
     </footer>
-</body>
-</html>
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -319,4 +336,5 @@
             $("#quantidade-pessoas").on("change", calcularPreco);
         });
     </script>
-       
+</body>
+</html>
