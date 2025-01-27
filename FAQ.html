@@ -3,256 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Pousada Talento Cloud</title>
-    <!--CSS DO BOOTSTRAP-->
+    <title>FAQ - Pousada Talento Cloud</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--SCRIPT DO BOOTSTRAP-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <!--Fonte Google-->
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Lavishly+Yours&display=swap" rel="stylesheet">
-    <!-- Bootstrap css Icons-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #202b18dc;
-            --secondary-color: #21351e;
-            --light-gray: #d6d6d6;
-            --form-bg: #6c69659a;
-        }
-
-        body {
-            background-color: #eeeeee;
-        }
-
-        .brand-title {
-            color: var(--light-gray);
-            font-family: 'Lavishly Yours', serif;
-            font-weight: 500;
-            font-size: 4rem;
-        }
-
-        .bg-primary-custom {
-            background-color: var(--primary-color);
-        }
-
-        .bg-secondary-custom {
-            background-color: var(--secondary-color);
-        }
-
-        .btn-custom {
-            background-color: var(--primary-color);
-            border-color: #fff;
-            color: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .btn-custom:hover {
-            background-color: #21481a;
-            border-color: #fff;
-            color: #fff;
-        }
-
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--light-gray);
-            text-decoration: underline;
-        }
-
-        .social-icons a {
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            color: #fff;
-            transition: all 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--light-gray);
-        }
-
-        @media (max-width: 768px) {
-            .brand-title {
-                font-size: 2rem;
-            }
-
-            .form-container {
-                margin: 1rem;
-                padding: 1rem;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <!--Cabeçalho-->
-    <header class="bg-primary-custom">
-        <div class="container-fluid py-3">
-            <div class="row align-items-center">
-                <div class="col-md-3 text-center text-md-start">
-                    <img src="Assets/rodapéLogo.01.bmp" alt="Logo" class="img-fluid" style="max-height: 60px;">
-                </div>
-                <div class="col-md-6 text-center">
-                    <h1 class="brand-title mb-0">Pousada Talento Cloud</h3>
-                    </div>
-                    <div class="col-md-3 text-center text-md-end">
-                        <a href="index.html" class="btn btn-custom">Home</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <div id="header-container"></div>
+    <div id="nav-container"></div>
 
-    <!-- Navigation -->
-    <nav class="bg-secondary-custom sticky-top">
+    <!-- Seção FAQ -->
+    <main class="flex-grow-1 py-5">
         <div class="container">
-            <ul class="nav justify-content-center py-2">
-                <li class="nav-item"><a href="./PaginaReserva.html" class="nav-link  text-white">RESERVA</a></li>
-                <li class="nav-item"><a href="./cadastro.html" class="nav-link  text-white">CADASTRO</a></li>
-                <li class="nav-item"><a href="./Login.html" class="nav-link  text-white">LOGIN</a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- PERGUNTAS FREQUENTES -->
-    <section class="FAQ">
-        <h3 class="text-center mt-4">FAQ - PERGUNTAS FREQUENTES</h3><br><br>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                1. Quais são os horários de check-in e check-out?
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">O check-in pode ser feito a partir das 14h, e o check-out deve ser realizado até as 12h. Para
-                    horários diferentes, entre em contato conosco com antecedência.</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    2. Vocês aceitam animais de estimação?
-                </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Sim, aceitamos pets! Pedimos apenas que eles sejam supervisionados e que seus donos recolham os
-                    resíduos.</div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    3. É necessário fazer reserva para o camping?
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Recomendamos que você faça uma reserva para garantir sua vaga, especialmente em períodos de alta
-                temporada e feriados.</div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    4. O camping possui estrutura para barracas e trailers?
-                </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Sim! Temos áreas específicas para barracas, pontos de energia para trailers, banheiros com
-                    chuveiros quentes e
-                    pias para higienização.</div>
-            </div>
-            </div>
-            <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    5. É permitido fazer churrasco no camping?
-                </button>
-            </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Sim, disponibilizamos áreas para churrasco equipadas com churrasqueira e mesas. É necessário
-                    reservar o espaço
-                    com antecedência.</div>
-            </div>
-            </div>
-        <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                6. Há opções de transporte até a pousada/camping?
-            </button>
-        </h2>
-        <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Oferecemos estacionamento gratuito para hóspedes. Caso você não venha de carro, podemos ajudar a
-                organizar
-                transporte, como táxi ou transfer, mediante solicitação.</div>
-        </div>
-        </div>
-        <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-                7. Como posso cancelar ou alterar minha reserva?
-            </button>
-        </h2>
-        <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Para cancelar ou alterar sua reserva, entre em contato conosco com pelo menos 48 horas de
-                antecedência. Consulte
-                nossa política de cancelamento para mais detalhes.</div>
-        </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                    8. Posso levar alimentos e bebidas para o camping?
-                </button>
-            </h2>
-            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Sim, é permitido trazer alimentos e bebidas, mas pedimos que sejam respeitadas as regras de
-                    convivência e
-                    limpeza das áreas comuns.</div>
-            </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-primary-custom text-white mt-auto">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5><i class="bi bi-calendar-heart"></i> Pousada Talento Cloud</h5>
-                    <p>A sua melhor escolha para descanso e lazer.</p>
-                    <div>
-                        <p><i class="bi bi-house me-2"></i>Rua Exemplo, 123, Cidade</p>
-                        <p><i class="bi bi-envelope me-2"></i>contato@pousadatalento.com</p>
-                        <p><i class="bi bi-phone me-2"></i>+55 12 3456-7890</p>
+            <h2 class="text-center mb-4">FAQ - Perguntas Frequentes</h2>
+            
+            <div class="accordion accordion-flush" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            1. Quais são os horários de check-in e check-out?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            O check-in pode ser feito a partir das 14h, e o check-out deve ser realizado até as 12h. Para horários diferentes, entre em contato conosco com antecedência.
+                        </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-4 mb-4">
-                    <h5><i class="bi bi-link"></i> Links úteis</h5>
-                    <ul class="list-unstyled footer-links">
-                        <li><a href="./index.html">Início</a></li>
-                        <li><a href="./PaginaReserva.html">Reserva</a></li>
-                        <li><a href="./cadastro.html">Cadastro</a></li>
-                        <li><a href="./Login.html">Login</a></li>
-                        <li><a href="./FAQ.html">FAQ</a></li>
-                    </ul>
                 </div>
 
-                <div class="col-lg-4 text-center">
-                    <h5>Redes Sociais</h5>
-                    <p>Conecte-se conosco:</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
-                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            2. Vocês aceitam animais de estimação?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, aceitamos pets! Pedimos apenas que eles sejam supervisionados e que seus donos recolham os resíduos.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            3. É necessário fazer reserva para o camping?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Recomendamos que você faça uma reserva para garantir sua vaga, especialmente em períodos de alta temporada e feriados.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            4. O camping possui estrutura para barracas e trailers?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim! Temos áreas específicas para barracas, pontos de energia para trailers, banheiros com chuveiros quentes e pias para higienização.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            5. É permitido fazer churrasco no camping?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, disponibilizamos áreas para churrasco equipadas com churrasqueira e mesas. É necessário reservar o espaço com antecedência.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                            6. Há opções de transporte até a pousada/camping?
+                        </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Oferecemos estacionamento gratuito para hóspedes. Caso você não venha de carro, podemos ajudar a organizar transporte, como táxi ou transfer, mediante solicitação.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                            7. Como posso cancelar ou alterar minha reserva?
+                        </button>
+                    </h2>
+                    <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Para cancelar ou alterar sua reserva, entre em contato conosco com pelo menos 48 horas de antecedência. Consulte nossa política de cancelamento para mais detalhes.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                            8. Posso levar alimentos e bebidas para o camping?
+                        </button>
+                    </h2>
+                    <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, é permitido trazer alimentos e bebidas, mas pedimos que sejam respeitadas as regras de convivência e limpeza das áreas comuns.
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg-secondary-custom text-center py-3">
-            <small>© 2025 Pousada Talento Cloud. Todos os direitos reservados.</small>
-        </div>
-    </footer>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/include.js"></script>
 </body>
 </html>
