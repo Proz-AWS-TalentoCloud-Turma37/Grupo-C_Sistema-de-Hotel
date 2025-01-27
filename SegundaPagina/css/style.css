@@ -1,0 +1,55 @@
+:root {
+    --bs-primary-rgb: 32, 43, 24;
+    --bs-secondary-rgb: 33, 53, 30;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+.brand-title {
+    font-family: 'Lavishly Yours', serif;
+    font-size: 4rem;
+    color: #d6d6d6;
+}
+
+.bg-custom-primary {
+    background-color: rgba(var(--bs-primary-rgb), 0.9);
+}
+
+.bg-custom-secondary {
+    background-color: rgb(var(--bs-secondary-rgb));
+}
+
+.btn-custom {
+    background-color: rgba(var(--bs-primary-rgb), 0.9);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: rgb(33, 72, 26);
+    border-color: #fff;
+    color: #fff;
+}
+
+.form-section {
+    min-height: 80vh;
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+}
+
+.form-container {
+    background-color: rgba(108, 105, 101, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .brand-title {
+        font-size: 2rem;
+    }
+}
