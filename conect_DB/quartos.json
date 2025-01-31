@@ -1,0 +1,15 @@
+[
+    {
+        "id": 101,
+        "nome": "Suíte Standard",
+        "capacidade": 2,
+        "preco": 250
+    },
+    {
+        "id": 102,
+        "nome": "Suíte Master",
+        "capacidade": 4,
+        "preco": 400
+    }
+]
+    

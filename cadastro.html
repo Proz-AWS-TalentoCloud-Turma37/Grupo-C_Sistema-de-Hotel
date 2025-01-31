@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Pousada Talento Cloud</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <div id="header-container"></div>
+    <div id="nav-container"></div>
+
+    <!-- Form Section -->
+    <main class="form-section flex-grow-1 py-5">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="text-center mb-4 text-white">Cadastre-se aqui!</h2>
+                <form class="needs-validation" novalidate id="cadastroForm">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="firstName" class="form-label text-white">Primeiro Nome</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                            <div class="valid-feedback">Tudo certo!</div>
+                            <div class="invalid-feedback">Por favor, informe seu primeiro nome.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="lastName" class="form-label text-white">Último Nome</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                            <div class="valid-feedback">Tudo certo!</div>
+                            <div class="invalid-feedback">Por favor, informe seu último nome.</div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="username" class="form-label text-white">Nome de usuário</label>
+                            <div class="input-group">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="username" required>
+                                <div class="invalid-feedback">Por favor, escolha um nome de usuário.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="city" class="form-label text-white">Cidade</label>
+                            <input type="text" class="form-control" id="city" required>
+                            <div class="invalid-feedback">Por favor, informe uma cidade.</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="state" class="form-label text-white">Estado</label>
+                            <select class="form-select" id="state" required>
+                                <option value="">Escolha...</option>
+                                <option>Acre</option>
+                                <option>Alagoas</option>
+                                <option>Amapá</option>
+                                <option>Amazonas</option>
+                                <option>Bahia</option>
+                                <option>Ceará</option>
+                                <option>Distrito Federal</option>
+                                <option>Espírito Santo</option>
+                                <option>Goiás</option>
+                                <option>Maranhão</option>
+                                <option>Mato Grosso</option>
+                                <option>Mato Grosso do Sul</option>
+                                <option>Minas Gerais</option>
+                                <option>Pará</option>
+                                <option>Paraíba</option>
+                                <option>Paraná</option>
+                                <option>Pernambuco</option>
+                                <option>Piauí</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Norte</option>
+                                <option>Rio Grande do Sul</option>
+                                <option>Rondônia</option>
+                                <option>Roraima</option>
+                                <option>Santa Catarina</option>
+                                <option>São Paulo</option>
+                                <option>Sergipe</option>
+                                <option>Tocantins</option>
+                            </select>
+                            <div class="invalid-feedback">Por favor, selecione um estado.</div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label text-white">CEP</label>
+                            <input type="text" class="form-control" id="zip" required>
+                            <div class="invalid-feedback">Por favor, informe um CEP válido.</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label text-white" for="terms">
+                                    Aceito os termos e regras do FAQ
+                                </label>
+                                <div class="invalid-feedback">
+                                    Você deve aceitar os termos antes de enviar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-custom" type="submit">Enviar cadastro</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Sucesso -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary-custom text-white">
+                    <h5 class="modal-title" id="successModalLabel">Cadastro Realizado com Sucesso!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 4rem;"></i>
+                    <h4 class="mb-4">Parabéns!</h4>
+                    <div class="user-info mb-4">
+                        <h5>Informações do Cadastro:</h5>
+                        <p class="mb-2"><strong>Nome:</strong> <span id="modalNome"></span></p>
+                        <p class="mb-2"><strong>Usuário:</strong> <span id="modalUsuario"></span></p>
+                        <p class="mb-2"><strong>Cidade:</strong> <span id="modalCidade"></span></p>
+                        <p class="mb-2"><strong>Estado:</strong> <span id="modalEstado"></span></p>
+                        <p><strong>CEP:</strong> <span id="modalCEP"></span></p>
+                    </div>
+                    <p class="text-muted">Você receberá um e-mail de confirmação em breve.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Login</button>
+                    <a href="index.html" class="btn btn-custom">Ir para Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/include.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('cadastroForm');
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+            // Máscara para CEP
+            const zipInput = document.getElementById('zip');
+            zipInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 8) value = value.slice(0, 8);
+                if (value.length > 5) {
+                    value = value.slice(0, 5) + '-' + value.slice(5);
+                }
+                e.target.value = value;
+            });
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                if (!form.checkValidity()) {
+                    event.stopPropagation();
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                // Coletar dados do formulário
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const username = document.getElementById('username').value;
+                const city = document.getElementById('city').value;
+                const state = document.getElementById('state');
+                const stateValue = state.options[state.selectedIndex].text;
+                const zip = document.getElementById('zip').value;
+
+                // Preencher o modal
+                document.getElementById('modalNome').textContent = `${firstName} ${lastName}`;
+                document.getElementById('modalUsuario').textContent = `@${username}`;
+                document.getElementById('modalCidade').textContent = city;
+                document.getElementById('modalEstado').textContent = stateValue;
+                document.getElementById('modalCEP').textContent = zip;
+
+                // Mostrar o modal
+                successModal.show();
+                
+                // Resetar o formulário
+                form.reset();
+                form.classList.remove('was-validated');
+            });
+        });
+    </script>
+</body>
+</html>

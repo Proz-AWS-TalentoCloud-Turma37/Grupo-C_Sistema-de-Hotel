@@ -1,0 +1,68 @@
+<section id="menu">
+    <div class="container-fluid p-0">
+        <div class="bg-primary-green d-flex justify-content-around align-items-center">
+            <div class="mt-4">
+                <a href="#">
+                    <img src="assets/img/rodapelogo.png" alt="Logo" class="img-fluid">
+                </a>
+            </div>
+            <div>
+                <h3 class="brand-title">Pousada Talento Cloud</h3>
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="bi bi-person-fill"></i> LOGIN
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal de Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content login-container">
+            <div class="modal-header border-0">
+                <h5 class="modal-title text-white" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center text-white mb-4">Digite seu email e senha para continuar!</p>
+
+                <form id="login-form" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um email válido.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input type="password" class="form-control" id="password" placeholder="Senha" required>
+                            <div class="invalid-feedback">
+                                A senha deve ter pelo menos 6 caracteres.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3 text-end">
+                        <a href="#" class="text-white small">Esqueceu sua senha?</a>
+                    </div>
+                    <button type="submit" class="btn btn-custom w-100">
+                        <i class="bi bi-box-arrow-in-right"></i> Entrar
+                    </button>
+                </form>
+                <div id="alert-container" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

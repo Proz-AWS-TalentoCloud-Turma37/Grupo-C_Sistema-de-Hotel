@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "usuario_id": 1,
+        "quarto_id": 101,
+        "checkin": "2025-10-15",
+        "checkout": "2025-10-20",
+        "pessoas": 2
+    },
+    {
+        "id": 2,
+        "usuario_id": 2,
+        "quarto_id": 102,
+        "checkin": "2025-11-01",
+        "checkout": "2025-11-05",
+        "pessoas": 3
+    }
+]
+    

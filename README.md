@@ -1,5 +1,5 @@
 # Sistema de Hotel
-## Sistema desenvolvido por: Gabriella, Luis Magno, Maycon Thiago e Núbia 
+## Sistema desenvolvido por: Gabriella, Luis Magno e Núbia 
 
 
 ## Pousada Talento Cloud
@@ -30,19 +30,36 @@
 
 ### Estrutura de Arquivos
 
-````plaintext
-hotel/
-├── public/
-│   ├── index.html           # Página inicial com descrição do hotel
-│   ├── login.html           # Login do sistema
-│   ├── cadastro.html        # Cadastro do hóspede
-│   ├── pagReserva.html        # Página da reserva
-|   ├── asset/
-|   ├──────── css/
-│   ├──────── style.css            # Estilos para a página
-|   ├──────── js/
-│   ├──────── script.js            # Estilos para a página
-|   └──────── img/
+````SISTEMADEHOTEL/
+├── assets/
+│   ├── css/
+│   │   ├── index.css
+│   │   └── style.css
+│   ├── img/
+│   │   ├── cabecalho/
+│   │   ├── conheca/
+│   │   ├── lazer/
+│   │   ├── nossos/
+│   │   ├── pousada/
+│   │   ├── servico/
+│   │   ├── mainlogo.png
+│   │   └── rodapelogo.png
+│   └── js/
+│       ├── include.js
+│       └── index.js
+├── components/
+│   ├── footer.html
+│   ├── header.html
+│   ├── indexFooter.html
+│   ├── indexHeader.html
+│   ├── indexNav.html
+│   └── nav.html
+├── cadastro.html
+├── FAQ.html
+├── index.html
+├── Login.html
+├── PaginaReserva.html
+└── README.md
 ````
 
 ### Telas do sistema:
